@@ -108,3 +108,16 @@
     }
   }
 }
+
+// underline header
+@mixin header-uline( $line-color: rgba(0,0,0,.5) ) {
+  &:after {
+      background: $line-color;
+      bottom: 5px;
+      content: "";
+      display: block;
+      height: 7.5px;
+      position: relative;
+      width: 80px;
+  }
+}

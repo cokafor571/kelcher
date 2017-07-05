@@ -89,8 +89,10 @@
         
         h2 {
             font-size: 2rem;
+            @include header-uline;
 
             @media screen and (max-width: $query__medium) {
+                @include header-uline( #eee ); 
                 color: white;
                 position: relative;
                 z-index: 1;
@@ -120,6 +122,13 @@
             display: block;
             margin-left: auto;
             padding: 10px 15px;
+
+            @media screen and (max-width: $query__medium) {
+                color: white;
+                position: relative;
+                z-index: 1;
+                text-shadow: 1px 2px #444040;
+            }
 
             &:hover {
                 background: rgba(0,0,0,.9);
@@ -154,8 +163,10 @@
         
         h2 {
             font-size: 2rem;
+            @include header-uline;
 
             @media screen and (max-width: $query__medium) {
+                @include header-uline( #eee );
                 color: white;
                 position: relative;
                 z-index: 1;
@@ -185,6 +196,13 @@
             display: block;
             margin-left: auto;
             padding: 10px 15px;
+
+            @media screen and (max-width: $query__medium) {
+                color: white;
+                position: relative;
+                z-index: 1;
+                text-shadow: 1px 2px #444040;
+            }
 
             &:hover {
                 background: rgba(0,0,0,.9);
@@ -220,8 +238,10 @@
         h2 {
             font-size: 2rem;
             z-index: 0;
+            @include header-uline;
 
             @media screen and (max-width: $query__medium) {
+                @include header-uline( #eee );
                 color: white;
                 position: relative;
                 z-index: 1;
@@ -251,6 +271,13 @@
             display: block;
             margin-left: auto;
             padding: 10px 15px;
+
+            @media screen and (max-width: $query__medium) {
+                color: white;
+                position: relative;
+                z-index: 1;
+                text-shadow: 1px 2px #444040;
+            }
 
             &:hover {
                 background: rgba(0,0,0,.9);
