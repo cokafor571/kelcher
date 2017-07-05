@@ -42,3 +42,19 @@
     }
   }
 }
+
+// footer social media
+.textwidget {
+  .footer-connect {
+    display: flex;
+    justify-content: center;
+
+    a {
+
+      &:hover,
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}
