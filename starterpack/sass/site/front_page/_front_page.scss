@@ -1,0 +1,415 @@
+// page introduction
+.intro {
+    display: block;
+    width: 90%;
+    margin: 3em auto 6em;
+
+    @media screen and (min-width: $query__medium) {
+        display: flex;
+    }
+
+    .snippet {
+        margin: 0 1.5em;
+        flex: 1; 
+
+        @media screen and (max-width: $query__medium) {
+
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
+                margin-top: 3em; 
+            }
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 0.0625em;
+            text-align: center;
+            margin-bottom: 0.75em;
+        }
+
+        p {
+            font-size: 1.1rem; 
+            text-align: center;
+            word-spacing: 0.1em;
+        }
+
+        i {
+            display: block;
+            text-align: center;
+            font-size: 5rem;
+            margin-bottom: 0.5em; 
+        }
+
+        a {
+            display: block;
+            text-align: center; 
+        }
+
+        button {
+            letter-spacing: 0.1em;
+            word-spacing: 0.1em;
+            padding: 12.5px 20px;
+            border-radius: 100px / 50px;
+            margin-top: 1em;
+            background-color: $color__background-button;
+            color: white;
+            font-family: $font__sans;
+
+            &:hover {
+                transition: transform 0.25s ease-out; 
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+// music section
+.kelcher-music {
+    background: url( http://kelcher.dev/wp-content/uploads/2017/06/music_img1.jpg ) no-repeat center center;
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: 30% 60%;
+    display: flex;
+    justify-content: flex-start;
+    transform: translate3d(0,0,0);
+
+    .music-content {
+        padding: 7em 4em;
+        width: 100%; 
+
+        @media screen and (max-width: $query__medium) {
+            @include dark-background;
+            position: relative;
+        }
+
+        @media screen and (min-width: $query__medium) {
+            width: 45%;
+        }
+        
+        h2 {
+            font-size: 2rem;
+
+            @media screen and (max-width: $query__medium) {
+                color: white;
+                position: relative;
+                z-index: 1;
+                text-shadow: 1px 2px #444040;
+            }
+
+            @media screen and (min-width: $query__medium) {
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            font-size: 1.15rem;
+            margin-top: 1em;
+
+            @media screen and (max-width: $query__medium) {
+                color: white;
+                position: relative;
+                z-index: 1;
+                text-shadow: 1px 2px #444040;
+            }
+        }
+
+        button {
+            background: transparent;
+            border-color: rgba(0,0,0,.9);
+            display: block;
+            margin-left: auto;
+            padding: 10px 15px;
+
+            &:hover {
+                background: rgba(0,0,0,.9);
+                color: white;
+            }
+        }
+    }
+}
+
+// promo section
+.kelcher-promo {
+    background: url( http://kelcher.dev/wp-content/uploads/2017/06/promo_img1.jpg ) no-repeat center center;
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: 30% 60%;
+    display: flex;
+    justify-content: flex-end;
+    transform: translate3d(0,0,0);
+
+    .promo-content {
+        padding: 7em 4em;
+        width: 100%;
+
+        @media screen and (max-width: $query__medium) {
+            @include dark-background;
+            position: relative;
+        }
+
+        @media screen and (min-width: $query__medium) {
+            width: 50%;
+        }
+        
+        h2 {
+            font-size: 2rem;
+
+            @media screen and (max-width: $query__medium) {
+                color: white;
+                position: relative;
+                z-index: 1;
+                text-shadow: 1px 2px #444040;
+            }
+
+            @media screen and (min-width: $query__medium) {
+                font-size: 2.5rem; 
+            }
+        }
+
+        p {
+            font-size: 1.15rem;
+            margin-top: 1em;
+
+            @media screen and (max-width: $query__medium) {
+                color: white;
+                position: relative;
+                z-index: 1;
+                text-shadow: 1px 2px #444040;
+            }
+        }
+
+        button {
+            background: transparent;
+            border-color: rgba(0,0,0,.9);
+            display: block;
+            margin-left: auto;
+            padding: 10px 15px;
+
+            &:hover {
+                background: rgba(0,0,0,.9);
+                color: white;
+            }
+        }
+    }
+}
+
+// marketing section
+.kelcher-marketing {
+    background: url( http://kelcher.dev/wp-content/uploads/2017/06/market_img1.jpg ) no-repeat center center;
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: 30% 60%;
+    display: flex;
+    justify-content: flex-start;
+    transform: translate3d(0,0,0);
+
+    .marketing-content {
+        padding: 7em 4em;
+        width: 100%; 
+        
+        @media screen and (max-width: $query__medium) {
+            @include dark-background;
+            position: relative;
+        }
+
+        @media screen and (min-width: $query__medium) {
+            width: 50%;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            z-index: 0;
+
+            @media screen and (max-width: $query__medium) {
+                color: white;
+                position: relative;
+                z-index: 1;
+                text-shadow: 1px 2px #444040;
+            }
+
+            @media screen and (min-width: $query__medium) {
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            font-size: 1.15rem; 
+            margin-top: 1em;
+
+            @media screen and (max-width: $query__medium) {
+                color: white;
+                position: relative;
+                z-index: 1;
+                text-shadow: 1px 2px #444040;
+            }
+        }
+
+        button {
+            background: transparent;
+            border-color: rgba(0,0,0,.9);
+            display: block;
+            margin-left: auto;
+            padding: 10px 15px;
+
+            &:hover {
+                background: rgba(0,0,0,.9);
+                color: white;
+            }
+        }
+    }
+}
+
+// contact 
+.contact {
+    background: linear-gradient(135deg, #f9edb3 0%,#ffcccc 100%);
+    padding-top: 2em;
+    padding-bottom: 4em;
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1.5em;
+    }
+
+    .contact-content {
+        display: block;
+        width: 100%;
+
+        @media screen and (min-width: $query__medium) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            height: 300px; 
+            width: auto;
+            max-width: 100%;
+            margin-bottom: 3em;
+
+            @media screen and (min-width: $query__medium) {
+                margin: 0;
+            }
+        }
+
+        .contact-info {
+            text-align: center;
+
+            h3 {
+                font-size: 1.5rem; 
+                margin-bottom: 1em;
+
+                i {
+                    padding-left: 0.5em;
+                    color: #ff4351; 
+                }      
+            }
+
+            p {
+                font-size: 1rem;
+
+                i {
+                    padding-right: 0.5em;
+                    color: #ff4351; 
+                }
+            }
+
+           
+        }
+    }
+}
+
+//align links and button 
+.link {
+    display: flex;
+    justify-content: flex-end;
+
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+//animations 
+.snippet.animation-element,
+.marketing-content.animation-element,
+.promo-content.animation-element,
+.music-content.animation-element,
+.contact-info.animation-element {
+    opacity: 0; 
+}
+
+.snippet.animation-element.in-view {
+    animation: fade 1s .5s forwards,
+               fadeUp 1s .5s ease-out both;   
+}
+
+.marketing-content.animation-element.in-view {
+    animation: fade 1s .5s forwards,
+               fadeLeft 1s .5s ease-out both;
+}
+
+.promo-content.animation-element.in-view {
+    animation: fade 1s .5s forwards,
+               fadeRight 1s .5s ease-out both;
+}
+
+.music-content.animation-element.in-view {
+    animation: fade 1s .5s forwards,
+               fadeLeft 1s .5s ease-out both;
+}
+
+.contact-info.animation-element.in-view {
+    animation: fade 1s .5s forwards,
+               fadeDown 1s .5s ease-out both;
+}
+
+//key-frames 
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0); 
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0); 
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(200px);
+    }
+    to {
+        transform: translateY(0); 
+    }
+}
+@keyframes fadeDown {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0); 
+    }
+}

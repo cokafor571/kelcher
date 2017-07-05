@@ -1,0 +1,110 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 18) * 1px;
+	font-size: $sizeValue * 1.1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+@mixin dark-background {
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        display: block; 
+		z-index: 1; 
+        // add position relative to parent
+		// may need to add z-index as necessary
+    }
+}
+
+@mixin slanted-background {
+    &:before {
+        content: '';
+        position: absolute;
+        left: -500px;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        display: block; 
+		z-index: 1; 
+        transform: skew(-26.25deg);
+        // add position relative to parent
+		// may need to add z-index as necessary
+    }
+}
+
+// counter pattern
+@mixin ul {
+  padding: 0;
+  margin-left: 0;
+  list-style: none;
+  counter-reset: counter;
+
+  > li:before {
+    counter-increment: counter;
+    content: counter(counter);
+  }
+}
+
+// list style
+@mixin ul-li {
+  position: relative;
+
+  > li {
+    &:before {
+      position: relative;
+      display: inline-block;
+      z-index: 2;
+      width: $size-c;
+      height: $size-c;
+      margin-right: $size-b;
+      margin-bottom: $size-b;
+      border: $size-border solid $color-purple;
+      line-height: 1.0rem;
+      text-align: center;
+      color: $color-purple;
+      background-color: white;
+      border-radius: 100em;
+      counter-increment: counter;
+      content: counter(counter);
+    }
+
+    &:after {
+      position: absolute;
+      top: 10px;
+      bottom: 0;
+      z-index: 1;
+      left: $size-b;
+      margin-left: -$size-border /2;
+      border-left: $size-border solid $color-purple;
+      content: "";
+    }
+
+    &:last-child:before {
+      margin-bottom: 0;
+    }
+  }
+}
