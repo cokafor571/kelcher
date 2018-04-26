@@ -1,0 +1,399 @@
+//Services Page
+.services-block {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    .individual-service {
+        margin: 0 0 4em;
+        padding: 0 2em;
+        text-align: center;
+        width: 100%;
+
+        @media screen and (min-width: $query__small) {
+            width: 50%;
+        }
+
+        @media screen and (min-width: $query__medium) {
+            width: 33.333333%;
+        }
+
+        svg {
+            color: #fff;
+            padding: 25px;
+            border-radius: 50%;
+            background: $color__site-green-dark;
+            filter: drop-shadow( 5px 10px 5px rgba(0,0,0,.25) );
+        }
+
+        h3 {
+            font-size: .95rem;
+            font-weight: 400;
+            margin: 2em 0;
+        }
+
+        p {
+            margin: 0 0 2em;
+            font-size: .9rem;
+            color: #777;
+        }
+
+        a {
+            font-size: .75rem;
+            text-decoration: none;
+            padding: 12px 20px;
+            border: 2px solid #000;
+
+            &:hover,
+            &:focus {
+                background: $color__site-green-dark;
+                border-color: $color__site-green-dark;
+                color: #fff;
+            }
+        }
+    }
+}
+
+//Our Work Page
+.work-web-block,
+.work-studies-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (min-width:800px) {
+        flex-direction: row;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+
+        @media screen and (min-width:800px) {
+            width: 50%;
+        }
+    }
+
+    .work-web-design,
+    .work-case-study {
+        padding: 0 1em;
+        text-align: center;
+        margin: 1em 0;
+
+        @media screen and (min-width:1025px) {
+            padding: 0 5em;
+            margin: 0;
+        }
+
+        h2 {
+            margin: 0 0 1em;
+            @include header-uline( $color__site-green );
+            font-size: 1.75rem;
+
+            @media screen and (min-width: $query__small) {
+                font-size: 2.3rem;
+            }
+        }
+
+        p {
+            margin: 0 0 2em;
+            word-spacing: 0.025em;
+            line-height: 1.8;
+            color: #777;
+        }
+
+        a {
+            background: $color__site-green;
+            padding: 8px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: .8rem;
+            font-family: $font__sans;
+            border: 2px solid $color__site-green;
+            transition: background .25s linear, border-color .25s linear;
+            text-decoration: none;
+
+            @media screen and (min-width: $query__small) {
+                padding: 12px 25px;
+                font-size: .9rem;
+            }
+
+            &:hover,
+            &:focus {
+                background: transparent;
+                border-color: $color__site-green;
+                color: $color__site-green;
+            }
+        }
+    }
+}
+
+//Swith columns for case studies at lower screen width
+.work-studies-block {
+    flex-direction: column-reverse;
+
+     @media screen and (min-width:800px) {
+        flex-direction: row;
+    }
+}
+
+//About Page
+.about-gallery {
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.team {
+    margin: 4em 0;
+
+    .team-header {
+        background-attachment: fixed;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4em;
+
+        h3 {
+            color: #fff;
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+        }
+    }
+
+    .team-members {
+        max-width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+
+        img {
+            display: block;
+            max-width: 350px;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            margin: 1em 0 0;
+        }
+
+        .member-position {
+            color: $color__site-green;
+            font-size: .9rem;
+        }
+    }
+}
+
+//Contact Page
+.contact-header {
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    @include dark-background;
+    padding: 4em 1em;
+    text-align: center;
+
+    .header-tagline {
+        font-size: 1.1rem;
+        font-style: italic;
+
+        @media screen and (min-width: $query__small) {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.contact-section {
+    display: block;
+    margin: 0 auto;
+
+    @media screen and (min-width: $query__medium) {
+        margin: 4em auto;
+        display: flex;
+        align-items: center;
+        max-width: 1150px;
+        justify-content: space-between;
+    }
+
+    .contact-form {
+        width: 100%;
+        background: $color__site-green-dark;
+        padding: 2em;
+
+        @media screen and (min-width: $query__medium) {
+            width: 48%;
+        }
+
+        h3 {
+            margin: 0;
+            color: #fff;
+            font-size: 1.25rem;
+            font-style: italic;
+        }
+
+        .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+            display: none;
+        }
+
+        .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper textarea.medium {
+            font-size: .8rem;
+            border-radius: 0;
+        }
+
+        .gform_wrapper .top_label .gfield {
+
+            &:not([id=field_3_5]) {
+
+                .gfield_label {
+                    display: none;
+                }
+            }
+        }
+
+        .gform_wrapper ul li.gfield {
+            margin-top: 1.5em;
+        }
+
+        .gform_wrapper ul.gfield_radio li {
+            width: 50%;
+            display: inline-block;
+        }
+
+        .gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit] {
+            color: #fff;
+            background: #333;
+            border: 1px solid #333;
+            border-radius: 0;
+            padding: 15px 25px;
+        }
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 2em;
+        background: #f8f8f8;
+
+        @media screen and (min-width: $query__medium) {
+            width: 48%;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            margin: 0;
+
+            @media screen and (min-width: $query__small) {
+                font-size: 1.6rem;
+            }
+        }
+
+        p {
+            margin: .25em 0;
+        }
+
+        a {
+            display: block;
+            font-size: .9rem;
+            text-decoration: none;
+            color: $color__site-green-dark;
+
+            &:hover,
+            &:focus {
+                color: $color__site-green-dark;
+            }
+
+            @media screen and (min-width: $query__small) {
+                font-size: 1.25rem;
+            }
+        }
+
+        .contact-info-location {
+            margin: 1.5em 0;
+
+            p {
+                font-size: 1.25rem;
+                color: $color__site-green-dark;
+            }
+        }
+
+        .sign-up {
+            font-size: 1.25rem;
+            color: $color__site-green-dark;
+        }
+    }
+}
+
+.contact-newsletter {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 2em 2em;
+
+    @media screen and (min-width: $query__small) {
+        padding: 4em 2em;
+    }
+
+    h4 {
+        margin: 0;
+        font-style: italic;
+        font-size: 1.25rem;
+
+        @media screen and (min-width: $query__small) {
+            font-size: 1.75rem;
+        }
+    }
+
+    .newsletter-tag {
+        width: 90%;
+        margin: 1.5em auto;
+        color: #000;
+
+        @media screen and (min-width: $query__small) {
+            width: 50%;
+        }
+    }
+
+    .gform_wrapper {
+        width: 300px;
+        margin: 0 auto;
+
+        .top_label .gfield_label {
+            display: none;
+        }
+
+        ul.gform_fields li.gfield {
+            padding: 0;
+        }
+
+        .top_label input.medium {
+            width: 100%;
+            border-radius: 0;
+            font-size: 1rem;
+        }
+
+        .gform_footer.top_label {
+            padding: 0;
+            margin: .75em 0 0;
+
+            input[type="submit"] {
+                width: 100%;
+                border-radius: 0;
+                color: #fff;
+                background: $color__site-green-dark;
+                border-color: $color__site-green-dark;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+//Gravity Forms Misc
+body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapper.gform_validation_error .top_label select.medium {
+    width: 100%;
+}

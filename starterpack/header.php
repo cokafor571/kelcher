@@ -24,46 +24,47 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'starterpack' ); ?></a>
 
     <header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
 
-            <?php the_custom_logo(); ?>
+        <div class="nav">
 
-            <div class="site-branding-text">
-                <?php
-                if ( is_front_page() && is_home() ) : ?>
-                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                <?php else : ?>
-                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                <?php
-                endif;
+            <div class="site-branding">
 
-                $description = get_bloginfo( 'description', 'display' );
-                if ( $description || is_customize_preview() ) : ?>
-                    <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-                <?php
-                endif; ?>
-            </div>
-		</div><!-- .site-branding -->
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button>
-            <?php if ( is_front_page() ) { 
-                wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); 
-            } else {
-                wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'pages-menu' ) );
-            } ?>
-		</nav><!-- #site-navigation -->
+                <?php if ( is_front_page() ) { 
+
+                    the_custom_logo(); ?>
+
+                    <a href="http://kelcher.test/" class="custom-logo-link" rel="home" itemprop="url">
+                        <img src="http://kelcher.test/wp-content/uploads/2018/04/kelcher_logo_black.png" class="custom-logo-black" alt="kelcher promotions logo" itemprop="logo">
+                    </a>
+
+                <?php } else { ?>
+                    <a href="http://kelcher.test/" class="custom-logo-link" rel="home" itemprop="url">
+                        <img src="http://kelcher.test/wp-content/uploads/2018/04/kelcher_logo_black.png" class="custom-logo-black" alt="kelcher promotions logo" itemprop="logo">
+                    </a>
+                <?php } ?>
+
+            </div><!-- .site-branding -->
+
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                
+            <!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button> -->
+            
+                <?php if ( is_front_page() ) { 
+                    wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); 
+                } else {
+                    wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'pages-menu' ) );
+                } ?>
+
+            </nav><!-- #site-navigation -->
+
+        </div> <!-- nav container -->
+
+        <div class="login-nav"> <!-- login nav container -->
+            <a href="kelcher.test/login">
+                <h3>LogIn</h3>
+            </a>
+        </div> <!-- end login nav container -->
+         
 	</header><!-- #masthead -->
-    <?php
-        if ( is_front_page() ) : ?>
-            <h1 class="blinking-text">Market Yourself</h1>
-            <div class="scroll-to-content" id="scroll-to-content"><a href="#content"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></div>
-    <?php endif; ?>
-
-    <?php if ( is_front_page() ) { ?>
-        <figure class="header-video"> <?php the_custom_header_markup(); ?> </figure>
-    <?php } else { ?>
-        <figure class="header-image"> <?php the_custom_header_markup(); ?> </figure>
-    <?php } ?>
-	
 
 	<div id="content" class="site-content">

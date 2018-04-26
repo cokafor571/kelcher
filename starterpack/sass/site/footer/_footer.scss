@@ -13,11 +13,27 @@
 }
 
 .site-info {
-  font-size: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   
   h2 {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 0;
+    font-size: 1rem;
+  }
+
+  a {
+    padding: .5em;
+    color: $color__footer;
+
+    &:hover,
+    &:focus {
+      color: #3B5998;
+    }
+
+    svg {
+      font-size: 1.1rem;
+    }
   }
 }
 
@@ -43,17 +59,113 @@
   }
 }
 
-// footer social media
+// footer text widget
 .textwidget {
-  .footer-connect {
-    display: flex;
-    justify-content: center;
 
-    a {
+  >p {
+    margin: 0;
 
-      &:hover,
-      &:focus {
-        border: none;
+    &.about-footer {
+      line-height: 1.5;
+      font-size: .95rem;
+      font-weight: 700;
+    }
+  }
+
+  //footer subscribe
+  .footer-contact {
+
+    svg {
+      margin-right: .5em;
+
+      path {
+        color: #fff;
+      }
+    }
+
+    p {
+        margin: 0 0 1.5em;
+    }
+  }
+
+  //Gravity form subscribe
+  .gform_wrapper {
+    width: 100%;
+    margin: 0;
+
+    .gform_heading {
+      font-size: .8rem;
+      line-height: 1.3;
+
+      .gform_title {
+        margin: 0 0 1em;
+      }
+    }
+
+    @media screen and (max-width: 641px) {
+
+      input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]) {
+        line-height: 1;
+        height: 34px;
+      }
+    }
+
+    span.gform_description {
+      margin: 0;
+    }
+
+    .top_label .gfield_label {
+      display: none;
+    }
+
+    ul.gform_fields li.gfield {
+      padding: 0;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 300px;
+      margin: 0;
+
+      @media screen and (min-width: 1025px) {
+        margin: 0 auto;
+      }
+
+      .gform_body {
+        max-width: 65%;
+
+        ul.gform_fields li.gfield {
+          margin: 0;
+
+          div.ginput_container {
+            margin: 0;
+
+            input.medium {
+              font-size: .9rem;
+              border-radius: 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .gform_footer.top_label {
+        max-width: 30%;
+        margin: 0;
+        padding: 0;
+
+        .gform_button.button {
+          margin: 0;
+          height: 34px;
+          font-size: .85rem;
+          padding: .6em .5em;
+          border-radius: 0;
+          width: 100%;
+          color: #fff;
+          background: $color__site-green;
+          border-color: $color__site-green;
+        }
       }
     }
   }

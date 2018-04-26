@@ -3,13 +3,13 @@ button,
 input,
 select,
 textarea {
-	color: $color__text-main;
-	font-family: $font__serif;
-	@include font-size(0.9);
+	font-family: $font__sans;
+	color: rgba(0,0,0,.8);
+	@include font-size(0.8);
 	line-height: $font__line-height-body;
 
 	@media screen and (min-width: 700px) {
-		@include font-size(1);
+		@include font-size(.9);
 	}
 }
 

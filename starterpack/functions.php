@@ -99,7 +99,7 @@ function starterpack_fonts_url() {
      * Translators: If there are characters in your language that are not
      * supported by Source Sans Pro and PT Serif, translate this to 'off'. Do not translate
      * into your own language.
-     */
+     *
     $source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'starterpack' );
 
     $pt_serif = _x( 'on', 'PT Serif font: on or off', 'starterpack' );
@@ -111,7 +111,7 @@ function starterpack_fonts_url() {
     }
 
     if ( 'off' !== $pt_serif ) {
-        $font_families[] = 'Source Sans Pro:400,700';
+        $font_families[] = 'PT Serif:400,700';
     }
 
     if ( in_array( 'on', array( $source_sans_pro, $pt_serif ) ) ) {
@@ -125,6 +125,29 @@ function starterpack_fonts_url() {
     }
 
     return esc_url_raw( $fonts_url );
+    */ 
+    
+    /* 
+    * Async google font loading and font awesome
+    */
+
+    ?> 
+	<script type="text/javascript">WebFontConfig = {
+      google: { 
+		  families: [ "Montserrat:400,700" ] 
+		}
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();</script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<?php
 }
 
 /**
@@ -292,7 +315,7 @@ add_action( 'widgets_init', 'starterpack_widgets_init' );
  * Enqueue scripts and styles.
  */
 function starterpack_scripts() {
-    // Enque google fonts: Source Sans and Pt Serif
+    // Enque google fonts and font-awesome: Montserrat
     wp_enqueue_style( 'starterpack-fonts', starterpack_fonts_url() );
 
 	wp_enqueue_style( 'starterpack-style', get_stylesheet_uri() );
@@ -312,10 +335,8 @@ function starterpack_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-    wp_enqueue_script( 'starterpack-header-script', get_template_directory_uri() . '/js/header-script.js' );
-
     if ( is_front_page() ) {
-        wp_enqueue_script( 'starterpack-scrollspy-script', get_template_directory_uri() . '/js/scrollspy.js' );
+        wp_enqueue_script( 'starterpack-header-script', get_template_directory_uri() . '/js/header-script.js' );
     }
 
     wp_enqueue_style( 'fa-icons', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );

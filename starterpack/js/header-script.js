@@ -1,1 +1,12 @@
-!function(e){e(function(){e(window).scroll(function(){var o=e(window).scrollTop();o>50?(e(".custom-logo").addClass("scale"),e(".site-branding-text").addClass("display_none"),e(".main-navigation").addClass("scale"),e(".site-header").addClass("bg-color")):(e(".custom-logo").removeClass("scale"),e(".site-branding-text").removeClass("display_none"),e(".main-navigation").removeClass("scale"),e(".site-header").removeClass("bg-color")),o<700&&e(".menu-item").removeClass("active")})}),e(function(){var o=e(".animation-element"),s=e(window);s.on("scroll resize",function(){var a=s.height(),n=s.scrollTop(),i=n+a;e.each(o,function(){var o=e(this),s=o.outerHeight(),a=o.offset().top;a+s>=n&&a<=i-150&&o.addClass("in-view")})}),s.trigger("scroll")})}(jQuery);
+(function( $ ) {
+    $(window).on('scroll', function() {
+        var scrollTop = $(this).scrollTop(),
+            header = $('.site-header');
+
+        if ( scrollTop > 100 ) {
+            header.addClass('bg-color');
+        } else {
+            header.removeClass('bg-color');
+        }
+    });
+})( jQuery );

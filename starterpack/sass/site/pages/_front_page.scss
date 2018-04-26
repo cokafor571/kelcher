@@ -1,0 +1,559 @@
+//Header video 
+.home-page {
+
+    .home-header {
+        max-height: 525px;
+        overflow: hidden;
+
+        .video-header {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+            @include dark-background( $background-color: rgba(0,0,0,.35) );
+            display: none;
+
+            @media screen and (min-width: $query__small) {
+                display: block;
+            }
+
+            iframe {
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+
+                @media screen and (min-width: 1000px) {
+                    top: -25px;
+                }
+            }
+
+            //Display header video picture
+            .video-header-content {
+
+                @media screen and (min-width: $query__small) {
+                    display: block;
+                    position: absolute;
+                    z-index: 1;
+                    top: 20%;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            .btn1 {
+                background: transparent;
+                padding: 10px 36px;
+                color: #fff;
+                font-size: .8rem;
+                font-family: $font__sans;
+                border: 2px solid #fff;
+                border-radius: 0;
+                margin-right: .7em;
+                transition: background .2s linear;
+                text-decoration: none;
+
+                @media screen and (min-width: $query__small) {
+                    padding: 12px 48px;
+                    font-size: .75rem;
+                }
+
+                &:hover,
+                &:focus {
+                    background: #fff;
+                    color: rgba(0,0,0,.8);
+                }
+            }
+
+            .btn2 {
+                background: $color__site-green;
+                padding: 10px 36px;
+                color: #fff;
+                font-size: .7rem;
+                font-family: $font__sans;
+                border: 2px solid $color__site-green;
+                border-radius: 0;
+                transition: background .25s linear, border-color .25s linear;
+                text-decoration: none;
+
+                @media screen and (min-width: $query__small) {
+                    padding: 12px 48px;
+                    font-size: .75rem;
+                }
+
+                &:hover,
+                &:focus {
+                    background: transparent;
+                    border-color: $color__site-green;
+                    color: $color__site-green;
+                }
+            }
+        }
+
+        .picture-header {
+            display: block;
+            position: relative;
+            height: 350px;
+            @include dark-background( $background-color: rgba(0,0,0,.4) );
+
+            @media screen and (min-width: $query__small) {
+                display: none;
+            }
+
+            .picture-header-content {
+                position: absolute;
+                z-index: 1;
+                top: 30%;
+                width: 100%;
+                text-align: center;
+            }
+
+            .btn1 {
+                background: transparent;
+                padding: 10px 36px;
+                color: #fff;
+                font-size: .8rem;
+                font-family: $font__sans;
+                border: 2px solid #fff;
+                border-radius: 0;
+                margin-right: .5em;
+                transition: background .2s linear;
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    background: #fff;
+                    color: rgba(0,0,0,.8);
+                }
+            }
+
+            .btn2 {
+                background: $color__site-green;
+                padding: 10px 36px;
+                color: #fff;
+                font-size: .8rem;
+                font-family: $font__sans;
+                border: 2px solid $color__site-green;
+                border-radius: 0;
+                transition: background .25s linear, border-color .25s linear;
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    background: transparent;
+                    border-color: $color__site-green;
+                    color: $color__site-green;
+                }
+            }
+        }
+    }
+}
+
+//Introduction
+.intro-text {
+    text-align: center;
+    margin: 6em 0;
+    
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .home-tagline {
+        font-size: 1rem;
+        margin: 1.5em 0;
+    }
+
+    .home-description {
+        font-size: 1rem;
+        width: 90%;
+        margin: 0 auto;
+        word-spacing: .025em;
+        line-height: 1.6;
+        color: #777;
+    }
+
+    @media screen and (min-width: $query__tablet) {
+
+        h1 {
+            font-size: 2.25rem;
+        }
+
+        .home-tagline {
+            font-size: 1.5rem;
+        }
+
+        .home-description {
+            width: 50%;
+        }
+    }
+}
+
+//Our Approach
+.home-approach {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .approach-block {
+        text-align: center;
+        padding: 0 2em;
+        margin: 1em auto;
+
+        .approach-title {
+            margin: 1em 0;
+            font-size: 1rem;
+            color: $color__site-green;
+        }
+
+        .approach-description {
+            font-size: 1rem;
+            color: #777;
+            line-height: 1.6;
+        }
+    }
+
+    @media screen and (min-width: $query__medium) {
+        flex-wrap: nowrap;
+        
+        .approach-block {
+            margin: 0 auto;
+
+            .approach-title {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+//Services
+.home-services {
+
+    .full-service-list {
+        background: url( 'http://kelcher.test/wp-content/uploads/2018/04/kelcher-services.jpg' ) no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 6em;
+
+        h3 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin: 0 0 .5em;
+            text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+        }
+
+        a {
+            background: transparent;
+            padding: 10px 36px;
+            color: #fff;
+            font-size: .7rem;
+            font-family: $font__sans;
+            border: 2px solid #fff;
+            border-radius: 0;
+            margin-right: .5em;      	
+            text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+            transition: background .2s linear;
+            text-decoration: none;
+
+            @media screen and (min-width: $query__small) {
+                padding: 12px 48px;
+                font-size: .75rem;
+            }
+
+            &:hover,
+            &:focus {
+                background: #fff;
+                color: rgba(0,0,0,.8);
+            }
+        }
+    }
+
+    .individual-services {
+        display: flex;
+        flex-wrap: wrap;
+
+        .individual-service {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0,0,0,.3);
+            background: #f6f6f6;
+
+            @media screen and (min-width: $query__small) {
+                width: 50%;
+            }
+
+            @media screen and (min-width: $query__medium) {
+                width: 33.333333%;
+            }
+
+            &:hover,
+            &:focus {
+                background: $color__site-green-dark;
+                
+                .animated-field {
+                    color: #fff;
+                    animation: bounceInUp .6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+                }
+
+                .hidden-field {
+                    display: block;
+                    animation: translateUp .6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+                }
+            }
+
+            .animated-field {
+                color: #bbb;
+
+                h3 {
+                    font-size: .9rem;
+                    margin: 2em 0;
+                }
+            }
+
+            .hidden-field {
+                display: none;
+                position: absolute;
+                color: #fff;
+                width: 90%;
+                margin: 0 auto;
+
+                 p {
+                    font-size: .8rem;
+                    margin: 0;
+                }
+
+                a {
+                    display: inline-block;
+                    padding: 12px 20px;
+                    border: 1px solid #fff;
+                    border-radius: 0;
+                    background: transparent;
+                    color: #fff;
+                    font-size: .7rem;
+                    margin-top: 4em;
+                    text-decoration: none;
+
+                    &:hover,
+                    &:focus {
+                        background: #fff;
+                        border-color: #fff;
+                        color: $color__site-green-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Our Work
+.home-work-section {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 1150px;
+    margin: 3em auto;
+
+    .home-work-text {
+        flex: 1;
+        padding: 0 1em;
+
+        h4 {
+            margin: 1em 0;
+            font-size: 1.25rem;
+        }
+
+        p {
+            margin-bottom: 2em;
+            line-height: 1.6;
+            color: #777;
+        }
+
+        a {
+            background: $color__site-green;
+            padding: 8px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: .75rem;
+            font-family: $font__sans;
+            border: 2px solid $color__site-green;
+            transition: background .25s linear, border-color .25s linear;
+            text-decoration: none;
+
+            @media screen and (min-width: $query__small) {
+                padding: 12px 25px;
+                font-size: .8rem;
+            }
+
+            &:hover,
+            &:focus {
+                background: transparent;
+                border-color: $color__site-green;
+                color: $color__site-green;
+            }
+        }
+    }
+
+    .home-work-image {
+        flex: 1;
+    }
+
+    @media screen and (min-width: $query__small) {
+        flex-direction: row;
+        margin: 4em auto;
+
+        .home-work-text h4 {
+            font-size: 1.75rem;
+        }
+    }
+} 
+
+//Case Studies and Brands
+.home-brands-section {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 1150px;
+    margin: 3em auto;
+
+    .home-brand-text {
+        flex: 1;
+        padding: 0 1em;
+
+        h4 {
+            margin: 1em 0;
+            font-size: 1.25rem;
+        }
+
+        p {
+            margin-bottom: 2em;
+            line-height: 1.6;
+            color: #777;
+        }
+
+        a {
+            background: $color__site-green;
+            padding: 8px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: .75rem;
+            font-family: $font__sans;
+            border: 2px solid $color__site-green;
+            transition: background .25s linear, border-color .25s linear;
+
+            @media screen and (min-width: $query__small) {
+                padding: 12px 25px;
+                font-size: .8rem;
+            }
+
+            &:hover,
+            &:focus {
+                background: transparent;
+                border-color: $color__site-green;
+                color: $color__site-green;
+            }
+        }
+    }
+
+    .home-brand-image {
+        flex: 1;
+    }
+
+    @media screen and (min-width: $query__small) {
+        flex-direction: row;
+        margin: 4em auto;
+
+        .home-brand-text h4 {
+            font-size: 1.75rem;
+        }
+
+        .home-brand-image {
+            margin-top: 0;
+        }
+    }
+} 
+
+//Contact 
+.homepage-contact {
+    
+    .homepage-contact-container {
+        @include dark-background( rgba( 0,0,0,.7 ) );
+        color: #fff;
+        text-align: center;
+        position: relative;
+        padding: 4em 1em;
+
+        h4 {
+            margin: 0;
+            font-weight: 400;
+            font-size: .95rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        p {
+            position: relative;
+            z-index: 1;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: .75em 0 2em;
+        }
+
+        a {
+            position: relative;
+            z-index: 1;
+            background: $color__site-green;
+            padding: 8px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: .75rem;
+            font-family: $font__sans;
+            border: 2px solid $color__site-green;
+            transition: background .25s linear, border-color .25s linear;
+
+            @media screen and (min-width: $query__small) {
+                padding: 12px 25px;
+                font-size: .8rem;
+            }
+
+            &:hover,
+            &:focus {
+                background: transparent;
+                border-color: $color__site-green;
+                color: $color__site-green;
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            padding: 4em 0;
+
+            h4 {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media screen and (min-width: $query__tablet) {
+            h4 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 2.15rem;
+            }
+        }
+    }
+}

@@ -26,7 +26,10 @@
         <?php } ?>
         
 		<div class="site-info">
-            <h2 class="footer-copy">&copy; Kelcher Promotional Group 2017</h2>
+            <h2 class="footer-copy">&copy; Kelcher Promotions 2018</h2>
+            <a href="https://www.facebook.com/kelcherpromotions/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

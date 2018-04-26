@@ -37,7 +37,10 @@ gulp.task('css', function() {
 		autoprefixer('last 2 versions', '> 1%')
 	]))
 	.pipe(sourcemaps.write(scss + 'maps'))
-	.pipe(cleanCss() )
+	//.pipe(cleanCss() )
+	//.pipe(rename({
+	//	suffix: '.min'
+	//}))
 	.pipe(gulp.dest(root));
 });
 
@@ -50,24 +53,24 @@ gulp.task('images', function() {
 });
 
 // JavaScript
-gulp.task('javascript', function() {
-	return gulp.src([js + '*.js'])
-	.pipe(jshint())
-	.pipe(jshint.reporter('default'))
-	.pipe(uglify() )
-	.pipe(gulp.dest(js));
-});
+//gulp.task('javascript', function() {
+	//return gulp.src([js + '*.js'])
+	//.pipe(jshint())
+	//.pipe(jshint.reporter('default'))
+	//.pipe(uglify() )
+	//.pipe(gulp.dest(js));
+//});
 
 
 // Watch everything
 gulp.task('watch', function() {
 	browserSync.init({ 
 		open: 'external',
-		proxy: 'kelcher.dev',
+		proxy: 'kelcher.test',
 		port: 8080
 	});
 	gulp.watch([root + '**/*.css', root + '**/*.scss' ], ['css']);
-	gulp.watch(js + '**/*.js', ['javascript']);
+	//gulp.watch(js + '**/*.js', ['javascript']);
 	gulp.watch(img + 'RAW/**/*.{jpg,JPG,png}', ['images']);
 	gulp.watch(root + '**/*').on('change', browserSync.reload);
 });

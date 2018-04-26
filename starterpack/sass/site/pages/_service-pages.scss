@@ -1,0 +1,109 @@
+//SEO Services
+.seo-service-list {
+    display: block;
+    margin: 2em auto;
+    padding: 0 1em;
+
+    @media screen and (min-width: $query__small) {
+        max-width: 1150px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 2em;
+
+        @media screen and (min-width: $query__small) {
+            font-size: 1.75rem;
+        }
+    }
+
+    .list {
+        display: block;
+        color: #777;
+
+        @media screen and (min-width: 500px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width: $query__small) {
+            max-width: 1050px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            @media screen and (min-width: 500px) {
+                width: 50%;
+            }
+
+            @media screen and (min-width: $query__small) {
+                width: auto;
+            }
+
+            li {
+                margin: 0 0 1em;
+                font-size: .95rem;
+            }
+
+            svg {
+                color: $color__site-green;
+                margin-right: 0.25em;
+            }
+        }
+    }
+}
+
+//Ad Services 
+.ads-list {
+    max-width: 1150px;
+    margin: 0 auto 4em;
+
+    h3 {
+        text-align: center;
+        margin: 0;
+        color: $color__site-green;
+    }
+
+    .individual-ad-service {
+        display: block;
+        margin-top: 3em;
+        background: #f7f7f7;
+
+        @media screen and (min-width: $query__small) {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            display: block;
+
+            @media screen and (min-width: $query__small) {
+                width: 50%;
+            }
+        }
+
+        div {
+            padding: 2em;
+
+            h2 {
+                font-size: 1.25rem;
+                font-style: italic;
+                font-weight: 400;
+                margin: 0;
+
+                @media screen and (min-width: $query__small) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            p {
+                line-height: 1.7;
+                word-spacing: .025em;
+                margin: 1em 0;
+            }
+        }
+    }
+}
