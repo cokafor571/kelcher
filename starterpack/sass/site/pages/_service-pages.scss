@@ -107,3 +107,83 @@
         }
     }
 }
+
+//Visual Services
+.visual-list {
+    max-width: 1150px;
+    margin: 0 auto 4em;
+
+    h3 {
+        text-align: center;
+        margin: 0;
+        color: $color__site-green;
+    }
+
+    .individual-visual-service {
+        display: block;
+        margin-top: 3em;
+        background: #f7f7f7;
+
+        @media screen and (min-width: $query__small) {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            display: block;
+
+            @media screen and (min-width: $query__small) {
+                width: 50%;
+            }
+        }
+
+        div {
+            padding: 2em;
+
+            h2 {
+                font-size: 1.25rem;
+                font-style: italic;
+                font-weight: 400;
+                margin: 0;
+
+                @media screen and (min-width: $query__small) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            p {
+                line-height: 1.7;
+                word-spacing: .025em;
+                margin: 1em 0;
+            }
+        }
+    }
+}
+
+//Web Design Services 
+.design-page {
+
+    a {
+        background: $color__site-green;
+        padding: 8px 20px;
+        display: inline-block; 
+        text-decoration: none;
+        color: #fff;
+        font-size: .8rem;
+        font-family: $font__sans;
+        border: 2px solid $color__site-green;
+        transition: background .25s linear, border-color .25s linear;
+
+        @media screen and (min-width: $query__small) {
+            padding: 12px 25px;
+            font-size: .9rem;
+        }
+
+        &:hover,
+        &:focus {
+            background: transparent;
+            border-color: $color__site-green;
+            color: $color__site-green;
+        }
+    }
+}

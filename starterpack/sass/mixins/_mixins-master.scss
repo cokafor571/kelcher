@@ -116,12 +116,67 @@
       bottom: -5px;
       content: "";
       display: block;
-      height: 7.5px;
+      height: 3.5px;
       position: relative;
-      width: 100px;
+      width: 80px;
       margin: 0 auto;
+
+      @media screen and (min-width: $query__small) {
+        height: 7.5px;
+        width: 100px;
+      }
   }
 }
+
+// Magic parallax mixins
+
+$parallax-perspective : 1 !default;
+$parallax-element     : "&" !default;
+$parallax-ios         : true !default;
+
+@mixin parallax-init( $parallax-ios : $parallax-ios ) {
+  & {
+    transform-style: preserve-3d;
+    perspective: 1px;
+    height: 100vh;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective-origin-x: 100%;
+  }
+}
+
+@mixin parallax( $url : "" ) {
+  & {
+    position: relative;
+    height: calc( 100vw - 100vw/1.95 );
+    transform-origin-x: 100%;
+
+    @media screen and (min-width: 900px) {
+      height: calc( 100vw - 100vw/1.85 );
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(2);
+    background: url( $url );
+    background-size: 100%;
+    height: calc( 100vw - 100vw/1.95 );
+    width: 100%;
+    z-index: -1;
+    transform-origin-x: 100%;
+
+    @media screen and (min-width: 900px) {
+      height: calc( 100vw - 100vw/1.85 );
+    }
+  }
+}
+
+// End of magic parallax mixins
 
 /*
 Header Menu

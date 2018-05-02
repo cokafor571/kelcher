@@ -1,0 +1,144 @@
+.login-content {
+    height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0d83dd;
+    color: #fff;
+    text-align: center;
+    font-family: arial, sans-serif;
+    padding: 20px 0;
+
+    @media screen and (min-width: $query__small) {
+        padding: 50px 0;
+    }
+
+    img {
+        display: block;
+    }
+
+    h3 {
+        margin: 1em 0;
+        font-family: arial, sans-serif;
+    }
+
+    .wppb-user-forms {
+        font-family: arial, sans-serif;
+
+        #loginform .login-username,
+        #loginform .login-password {
+            padding-bottom: 10px;
+        
+            input[type="text"],
+            input[type="password"] {
+                border-radius: 4px;
+                display: block;
+                margin-top: 10px;
+                padding: 14px 18px;
+                width: 100%;
+                font-size: 1.25rem;
+                margin: 0;
+            }
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            font-family: arial, sans-serif;
+            border-color: $color__site-green;
+            background: $color__site-green;
+            color: #fff;
+            font-size: 1.25rem;
+            border-radius: 4px;
+            display: block;
+            margin-top: 10px;
+            padding: 14px 18px;
+        }
+    }
+
+    #wppb-login-wrap p {
+        padding: 0;
+
+        &.login-register-lost-password {
+            margin-top: .5em;
+
+            a {
+                color: #fff
+            }
+        }
+    }
+}
+
+.register-content {
+    height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0d83dd;
+    text-align: center;
+    font-family: arial, sans-serif;
+    padding: 25px;
+
+    @media screen and (min-width: $query__small) {
+        padding: 50px;
+    }
+
+    .register-container {
+        padding: 16px 10px;
+        background: #fff;
+
+        @media screen and (min-width: $query__small) {
+            max-width: 500px;
+            padding: 48px 40px;
+        }
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    h3 {
+        margin: 1em 0;
+        font-family: arial, sans-serif;
+        font-size: 1.25rem;
+
+        @media screen and (min-width: $query__small) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .wppb-user-forms {
+        font-family: arial, sans-serif;
+
+        ul li {
+            padding-bottom: 10px;
+        }
+
+        input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
+            border-radius: 4px;
+            display: block;
+            margin-top: 10px;
+            padding: 6px 10px;
+            width: 100%;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            font-family: arial, sans-serif;
+            border-color: $color__site-green;
+            background: $color__site-green;
+            color: #fff;
+            font-size: 1.25rem;
+            border-radius: 4px;
+            display: block;
+            margin-top: 10px;
+            padding: 14px 18px;
+        }
+    }
+
+    .wppb-user-forms ul li.wppb-send-credentials-checkbox {
+        display: none;
+    }
+}

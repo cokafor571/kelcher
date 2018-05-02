@@ -1096,7 +1096,7 @@ get_header(); ?>
 
 				<?php $image = get_field('email_header_picture'); ?> <!-- desktop email header image -->
 
-				<div class="picture-header" style="background-image: url(<?php echo $image['url']; ?>) no-repeat center center; background-size:cover">
+				<div class="picture-header" style="background: url(<?php echo $image['url']; ?>) no-repeat center center; background-size:cover">
 
 					<?php if( get_field('email_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('email_header_title'); ?></h1>
@@ -1110,7 +1110,7 @@ get_header(); ?>
 
 				<?php $imagem = get_field('email_header_picture_mobile'); ?> <!-- mobile email header image -->
 
-				<div class="picture-header-mobile" style="background-image: url(<?php echo $imagem['url']; ?>) no-repeat center center; background-size:cover">
+				<div class="picture-header-mobile" style="background: url(<?php echo $imagem['url']; ?>) no-repeat center center; background-size:cover">
 
 					<?php if( get_field('email_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('email_header_title'); ?></h1>
@@ -1124,9 +1124,9 @@ get_header(); ?>
 
 			</section> <!-- end email page header -->
 
-			<section class="email-page-intro"> <!-- email text and picture intro -->
+			<section class="service-pages-intro"> <!-- email text and picture intro -->
 
-				<div class="email-intro-text">
+				<div class="service-pages-intro-text">
 					<?php if( get_field('email_heading_1') ): ?>
 						<h3><?php the_field('email_heading_1'); ?></h3>
 					<?php endif;
@@ -1135,8 +1135,8 @@ get_header(); ?>
 					<?php endif; ?>
 				</div>
 
-				<div class="email-intro-img">
-					<?php $image = get_sub_field('email_intro_image'); ?>
+				<div class="service-pages-intro-img">
+					<?php $image = get_field('email_intro_image'); ?>
 						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 				</div>
 
@@ -1165,6 +1165,89 @@ get_header(); ?>
 		<?php endif; ?>
 
 		<!-- End Email Marketing Page Custom Fields -->
+		
+		<!-- Content Marketing Page Custom Fields -->
+
+		<?php if( is_page( 'Content Marketing' ) ) : ?>
+
+		<div class="content-page"> <!-- content page container -->
+
+			<section class="content-header"> <!-- content page header -->
+
+				<?php $image = get_field('content_header_picture'); ?> <!-- desktop content header image -->
+
+				<div class="picture-header" style="background: url(<?php echo $image['url']; ?>) no-repeat center center; background-size:cover">
+
+					<?php if( get_field('content_header_title') ): ?>
+						<h1 class="header-title"><?php the_field('content_header_title'); ?></h1>
+					<?php endif;
+
+					if( get_field('content_header_tagline') ): ?>
+						<p class="header-tagline"><?php the_field('content_header_tagline'); ?></p>
+					<?php endif; ?>
+
+				</div> <!-- end desktop content header image -->
+
+				<?php $imagem = get_field('content_header_picture_mobile'); ?> <!-- mobile content header image -->
+
+				<div class="picture-header-mobile" style="background: url(<?php echo $imagem['url']; ?>) no-repeat center center; background-size:cover">
+
+					<?php if( get_field('content_header_title') ): ?>
+						<h1 class="header-title"><?php the_field('content_header_title'); ?></h1>
+					<?php endif;
+
+					if( get_field('content_header_tagline') ): ?>
+						<p class="header-tagline"><?php the_field('content_header_tagline'); ?></p>
+					<?php endif; ?>
+
+				</div> <!-- end mobile content header image -->
+
+			</section> <!-- end content page header -->
+
+			<section class="service-pages-intro"> <!-- content text and picture intro -->
+
+				<div class="service-pages-intro-text">
+
+					<?php if( get_field('content_heading_1') ): ?>
+						<h3><?php the_field('content_heading_1'); ?></h3>
+					<?php endif;
+
+					if( get_field('content_content_1') ): ?>
+						<p><?php the_field('content_content_1'); ?></p>
+					<?php endif; ?>
+
+				</div>
+
+				<div class="service-pages-intro-img">
+					<?php $image = get_field('content_intro_image'); ?>
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+				</div>
+
+			</section> <!-- end content text picture intro -->
+
+			<section class="page-contact"> <!-- page contact section -->
+
+				<?php if( get_field('contact_body') ): ?>
+					<h4><?php the_field('contact_body'); ?></h4>
+				<?php endif;
+
+				$link = get_field('contact_link');
+
+				if( $link ): ?>
+					
+					<a href="<?php echo $link['url']; ?>">
+						<?php echo $link['title']; ?>
+					</a>
+				
+				<?php endif; ?>
+
+			</section> <!-- end page contact -->
+
+		</div> <!-- end content page container -->
+
+		<?php endif; ?>
+
+		<!-- End Content Marketing Page Custom Fields -->
 
 
 		<!-- Visual Page Custom Fields -->
@@ -1177,41 +1260,50 @@ get_header(); ?>
 
 				<?php $image = get_field('visual_header_picture'); ?> <!-- desktop visual header image -->
 
-				<div class="picture-header" style="background-image: url(<?php echo $image['url']; ?>);">
+				<div class="picture-header" style="background: url(<?php echo $image['url']; ?>) no-repeat center center; background-size:cover">
+
 					<?php if( get_field('visual_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('visual_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('visual_header_tagline') ): ?>
 						<p class="header-tagline"><?php the_field('visual_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end desktop visual header image -->
 
 				<?php $imagem = get_field('visual_header_picture_mobile'); ?> <!-- mobile ads header image -->
 
-				<div class="picture-header-mobile" style="background-image: url(<?php echo $imagem['url']; ?>);">
+				<div class="picture-header-mobile" style="background: url(<?php echo $imagem['url']; ?>) no-repeat center center; background-size:cover">
+
 					<?php if( get_field('visual_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('visual_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('visual_header_tagline') ): ?>
 						<p class="header-tagline"><?php the_field('visual_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end mobile visual header image -->
 
 			</section> <!-- end visual page header -->
 
-			<section class="visual-page-intro"> <!-- visual text and picture intro -->
+			<section class="service-pages-intro"> <!-- visual text and picture intro -->
 
-				<div class="visual-intro-text">
+				<div class="service-pages-intro-text">
+
 					<?php if( get_field('visual_heading_1') ): ?>
 						<h3><?php the_field('visual_heading_1'); ?></h3>
 					<?php endif;
+
 					if( get_field('visual_content_1') ): ?>
 						<p><?php the_field('visual_content_1'); ?></p>
 					<?php endif; ?>
+
 				</div>
 
-				<div class="visual-intro-img">
-					<?php $image = get_sub_field('visual_intro_image'); ?>
+				<div class="service-pages-intro-img">
+					<?php $image = get_field('visual_intro_image'); ?>
 						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 				</div>
 
@@ -1221,35 +1313,39 @@ get_header(); ?>
 
 				<?php if( get_field('visual_list_heading') ): ?>
 					<h3><?php the_field('visual_list_heading'); ?></h3>
-				<?php endif; ?>
+				<?php endif;
 
-				<div class="individual-visual-service">
+					if( have_rows('visual_services') ):
 
-					<?php 
-						if( have_rows('visual_services') ):
+						while ( have_rows('visual_services') ) : the_row(); ?>
 
-							while ( have_rows('visual_services') ) : the_row();
+						<div class="individual-visual-service">
 
-								$image = get_sub_field('visual_service_image'); ?>
-									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"> 
+							<?php $image = get_sub_field('visual_service_image'); ?>
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"> 
 
-								<div>
-									<?php if( get_sub_field('visual_service_title') ): ?>
-										<h2 class="visual-service-title"><?php the_sub_field('visual_service_title'); ?></h2>
-									<?php endif; ?>
-									<?php if( get_sub_field('visual_service_content') ): ?>
-										<p class="visual-service-content"><?php the_sub_field('visual_service_content'); ?></p>
-									<?php endif; ?>
-								</div>
+							<div>
 
-							<?php endwhile;  ?>
+								<?php if( get_sub_field('visual_service_title') ): ?>
+									<h2><?php the_sub_field('visual_service_title'); ?></h2>
+								<?php endif;
 
-						<?php else : ?>
+								if( get_sub_field('visual_service_content') ): ?>
+									<p><?php the_sub_field('visual_service_content'); ?></p>
+								<?php endif; ?>
 
-							<p>Our approach is tried and tested</p>
+							</div>
 
-						<?php endif;
-					?>
+						</div>
+
+						<?php endwhile;  ?>
+
+					<?php else : ?>
+
+						<p>Our approach is tried and tested</p>
+
+					<?php endif;
+				?>
 
 				</div>
 
@@ -1290,47 +1386,58 @@ get_header(); ?>
 
 				<?php $image = get_field('social_header_picture'); ?> <!-- desktop social header image -->
 
-				<div class="picture-header" style="background-image: url(<?php echo $image['url']; ?>);">
+				<div class="picture-header" style="background: url(<?php echo $image['url']; ?>) no-repeat center center; background-size:cover">
+				
 					<?php if( get_field('social_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('social_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('social_header_tagline') ): ?>
 						<p class="header-tagline"><?php the_field('social_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end desktop social header image -->
 
 				<?php $imagem = get_field('social_header_picture_mobile'); ?> <!-- mobile social header image -->
 
-				<div class="picture-header-mobile" style="background-image: url(<?php echo $imagem['url']; ?>);">
+				<div class="picture-header-mobile" style="background: url(<?php echo $imagem['url']; ?>) no-repeat center center; background-size:cover">
+
 					<?php if( get_field('social_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('social_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('social_header_tagline') ): ?>
 						<p class="header-tagline"><?php the_field('social_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end mobile social header image -->
 
 			</section> <!-- end social page header -->
 
-			<section class="social-page-intro"> <!-- social text and picture intro -->
+			<section class="service-pages-intro"> <!-- social text and picture intro -->
 
-				<div class="social-intro-text">
+				<div class="service-pages-intro-text">
+
 					<?php if( get_field('social_heading_1') ): ?>
 						<h3><?php the_field('social_heading_1'); ?></h3>
 					<?php endif;
+
 					if( get_field('social_content_1') ): ?>
 						<p><?php the_field('social_content_1'); ?></p>
 					<?php endif;
+
 					if( get_field('social_heading_2') ): ?>
 						<h3><?php the_field('social_heading_2'); ?></h3>
 					<?php endif;
+
 					if( get_field('social_content_2') ): ?>
 						<p><?php the_field('social_content_2'); ?></p>
 					<?php endif; ?>
+
 				</div>
 
-				<div class="social-intro-img">
-					<?php $image = get_sub_field('social_intro_image'); ?>
+				<div class="service-pages-intro-img">
+					<?php $image = get_field('social_intro_image'); ?>
 						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 				</div>
 
@@ -1371,31 +1478,37 @@ get_header(); ?>
 
 				<?php $image = get_field('design_header_picture'); ?> <!-- desktop design header image -->
 
-				<div class="picture-header" style="background-image: url(<?php echo $image['url']; ?>);">
+				<div class="picture-header" style="background: url(<?php echo $image['url']; ?>) no-repeat center center; background-size:cover">
+
 					<?php if( get_field('design_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('design_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('design_header_tagline') ): ?>
 						<p class="header-tagline"><?php the_field('design_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end desktop design header image -->
 
 				<?php $imagem = get_field('design_header_picture_mobile'); ?> <!-- mobile design header image -->
 
-				<div class="picture-header-mobile" style="background-image: url(<?php echo $imagem['url']; ?>);">
+				<div class="picture-header-mobile" style="background: url(<?php echo $imagem['url']; ?>) no-repeat center center; background-size:cover">
+
 					<?php if( get_field('design_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('design_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('design_header_tagline') ): ?>
 						<p class="header-tagline"><?php the_field('design_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end mobile design header image -->
 
 			</section> <!-- end design page header -->
 
-			<section class="design-page-intro"> <!-- design text and picture intro -->
+			<section class="service-pages-intro"> <!-- design text and picture intro -->
 
-				<div class="design-intro-text">
+				<div class="service-pages-intro-text">
 
 					<?php if( get_field('design_heading_1') ): ?>
 						<h3><?php the_field('design_heading_1'); ?></h3>
@@ -1405,7 +1518,7 @@ get_header(); ?>
 						<p><?php the_field('design_content_1'); ?></p>
 					<?php endif;
 
-					$link = get_field('our_design_link');
+					$link = get_field('design_link');
 
 					if( $link ): ?>
 						
@@ -1417,8 +1530,8 @@ get_header(); ?>
 
 				</div>
 
-				<div class="design-intro-img">
-					<?php $image = get_sub_field('design_intro_image'); ?>
+				<div class="service-pages-intro-img">
+					<?php $image = get_field('design_intro_image'); ?>
 						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 				</div>
 
@@ -1459,27 +1572,45 @@ get_header(); ?>
 
 				<?php $image = get_field('design_header_picture'); ?> <!-- desktop design header image -->
 
-				<div class="picture-header" style="background-image: url(<?php echo $image['url']; ?>);">
+				<div class="picture-header" style="background: url(<?php echo $image['url']; ?>) no-repeat center center; background-size:cover">
+
 					<?php if( get_field('design_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('design_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('design_header_tagline') ): ?>
 						<p class="header-tagline"><?php the_field('design_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end desktop design header image -->
 
 				<?php $imagem = get_field('design_header_picture_mobile'); ?> <!-- mobile design examples header image -->
 
-				<div class="picture-header-mobile" style="background-image: url(<?php echo $imagem['url']; ?>);">
+				<div class="picture-header-mobile" style="background: url(<?php echo $imagem['url']; ?>) no-repeat center center; background-size:cover">
+
 					<?php if( get_field('design_header_title') ): ?>
 						<h1 class="header-title"><?php the_field('design_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('design_header_tagline') ): ?>
 						<p class="header-tagline"><?php the_field('design_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end mobile design examples header image -->
 
 			</section> <!-- end design examples header -->
+
+			<section class="development-intro"> <!-- social text and picture intro -->
+
+					<?php if( get_field('development_heading_1') ): ?>
+						<h3><?php the_field('development_heading_1'); ?></h3>
+					<?php endif;
+
+					if( get_field('development_content_1') ): ?>
+						<p><?php the_field('development_content_1'); ?></p>
+					<?php endif; ?>
+
+			</section> <!-- end social text picture intro -->
 
 			<section class="design-block"> <!-- begin design websites -->
 
@@ -1492,7 +1623,7 @@ get_header(); ?>
 
 								<?php 
 
-								$link = get_field('link');
+								$link = get_sub_field('link');
 
 								if( $link ): ?>
 									
@@ -1504,6 +1635,18 @@ get_header(); ?>
 									</a>
 
 								<?php endif; ?>
+
+								<div class="website-info">
+
+									<?php if( get_sub_field('website_name') ): ?>
+										<h5><?php the_sub_field('website_name'); ?></h5>
+									<?php endif;
+
+									if( get_sub_field('website_description') ): ?>
+										<p><?php the_sub_field('website_description'); ?></p>
+									<?php endif; ?>
+
+								</div>
 
 							</div>
 
@@ -1553,24 +1696,30 @@ get_header(); ?>
 
 				<?php $image = get_field('studies_header_picture'); ?> <!-- studies desktop header image -->
 
-				<div class="picture-header" style="background-image: url(<?php echo $image['url']; ?>);">
+				<div class="picture-header" style="background: url(<?php echo $image['url']; ?>) no-repeat center center; background-size:cover">
+
 					<?php if( get_field('studies_header_title') ): ?>
-						<p class="title"><?php the_field('studies_header_title'); ?></p>
+						<h1 class="header-title"><?php the_field('studies_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('studies_header_tagline') ): ?>
-						<p class="tagline"><?php the_field('studies_header_tagline'); ?></p>
+						<p class="header-tagline"><?php the_field('studies_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end studies desktop image -->
 
 				<?php $imagem = get_field('studies_mobile_header_picture'); ?> <!-- studies mobile header image -->
 
-				<div class="picture-header" style="background-image: url(<?php echo $imagem['url']; ?>);">
+				<div class="picture-header-mobile" style="background: url(<?php echo $imagem['url']; ?>) no-repeat center center; background-size:cover">
+
 					<?php if( get_field('studies_header_title') ): ?>
-						<p class="title"><?php the_field('studies_header_title'); ?></p>
+						<h1 class="title"><?php the_field('studies_header_title'); ?></h1>
 					<?php endif;
+
 					if( get_field('studies_header_tagline') ): ?>
 						<p class="tagline"><?php the_field('studies_header_tagline'); ?></p>
 					<?php endif; ?>
+
 				</div> <!-- end studies mobile header image -->
 
 			</section> <!-- end studies header -->
@@ -1587,14 +1736,14 @@ get_header(); ?>
 								<div class="individual-content">
 
 									<?php if( get_sub_field('case_study_title') ): ?>
-										<p class="title"><?php the_sub_field('case_study_title'); ?></p>
+										<p class="study-title"><?php the_sub_field('case_study_title'); ?></p>
 									<?php endif;
 
 									if( get_sub_field('case_study_content') ): ?>
-										<p class="description"><?php the_sub_field('case_study_content'); ?></p>
+										<p class="study-description"><?php the_sub_field('case_study_content'); ?></p>
 									<?php endif;
 									
-									$link = get_field('individual_case_link');
+									$link = get_sub_field('case_study_link');
 
 									if( $link ): ?>
 										

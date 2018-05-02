@@ -405,7 +405,6 @@ dfn, cite, em, i {
 blockquote {
 	position: relative;
 	margin: 0 0 1em;
-	background: #eee;
 	padding: 1em 2em .5em 5em;
 	font-style: italic;
 }
@@ -413,12 +412,18 @@ blockquote {
 blockquote:before {
 	position: absolute;
 	top: -.2em;
-	left: -.13em;
+	left: -.6em;
 	content: "“";
 	font-family: "Montserrat", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
-	font-size: 12em;
+	font-size: 3em;
 	line-height: 100%;
-	color: white;
+	color: #3ec73e;
+}
+
+@media screen and (min-width: 600px) {
+	blockquote:before {
+		font-size: 5em;
+	}
 }
 
 address {
@@ -1434,6 +1439,38 @@ Header Menu
 	}
 }
 
+.study-header-title {
+	font-size: 1.25rem;
+	color: #fff;
+	margin: 0;
+	z-index: 1;
+	position: relative;
+}
+
+.study-header-title:after {
+	background: #3ec73e;
+	bottom: -5px;
+	content: "";
+	display: block;
+	height: 3.5px;
+	position: relative;
+	width: 80px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+	.study-header-title:after {
+		height: 7.5px;
+		width: 100px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.study-header-title {
+		font-size: 2.25rem;
+	}
+}
+
 .header-tagline {
 	font-size: 1.1rem;
 	color: #fff;
@@ -1449,8 +1486,24 @@ Header Menu
 	}
 }
 
+.study-header-tagline {
+	font-size: .95rem;
+	color: #fff;
+	word-spacing: .1em;
+	z-index: 1;
+	position: relative;
+	margin: 2em .25em 0;
+}
+
+@media screen and (min-width: 600px) {
+	.study-header-tagline {
+		font-size: 1rem;
+		width: 50%;
+	}
+}
+
 .page-contact {
-	background: url("http://kelcher.test/wp-content/uploads/2018/04/contact-kelcher-today.jpg") no-repeat center center;
+	background: url("https://kelcherpromotions.com/wp-content/uploads/2018/04/contact-kelcher-today.jpg") no-repeat center center;
 	background-size: cover;
 	color: #fff;
 	text-align: center;
@@ -1566,6 +1619,14 @@ Header Menu
 	}
 }
 
+@media screen and (max-width: 900px) {
+	.service-pages-intro {
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+}
+
 .service-pages-intro .service-pages-intro-text {
 	padding: 0 1em;
 }
@@ -1578,9 +1639,38 @@ Header Menu
 	}
 }
 
+@media screen and (min-width: 900px) {
+	.service-pages-intro .service-pages-intro-text {
+		padding: 0 2em 0 1em;
+	}
+}
+
 .service-pages-intro .service-pages-intro-text h3 {
 	font-size: 1.25rem;
 	margin: 1em 0;
+}
+
+.service-pages-intro .service-pages-intro-text h3:after {
+	background: #c3c3c3;
+	bottom: -5px;
+	content: "";
+	display: block;
+	height: 3.5px;
+	position: relative;
+	width: 80px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+	.service-pages-intro .service-pages-intro-text h3:after {
+		height: 7.5px;
+		width: 100px;
+	}
+}
+
+.service-pages-intro .service-pages-intro-text h3:after {
+	height: 3.5px;
+	margin: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -1592,6 +1682,7 @@ Header Menu
 .service-pages-intro .service-pages-intro-text p {
 	color: #777;
 	line-height: 1.7;
+	word-spacing: .01em;
 }
 
 @media screen and (min-width: 600px) {
@@ -1600,6 +1691,10 @@ Header Menu
 		    -ms-flex: 1;
 		        flex: 1;
 	}
+}
+
+.service-pages-intro .service-pages-intro-img img {
+	display: block;
 }
 
 /*--------------------------------------------------------------
@@ -1672,6 +1767,7 @@ Header Menu
 	margin-right: .7em;
 	transition: background .2s linear;
 	text-decoration: none;
+	display: inline-block;
 }
 
 @media screen and (min-width: 600px) {
@@ -1696,6 +1792,7 @@ Header Menu
 	border-radius: 0;
 	transition: background .25s linear, border-color .25s linear;
 	text-decoration: none;
+	display: inline-block;
 }
 
 @media screen and (min-width: 600px) {
@@ -2243,7 +2340,676 @@ Header Menu
 }
 
 /*--------------------------------------------------------------
-## Promotions Page
+## Our Work Page
+--------------------------------------------------------------*/
+.development-intro {
+	margin: 2em 0;
+	text-align: center;
+	padding: 0 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.development-intro {
+		margin: 4em 0;
+	}
+}
+
+.development-intro h3 {
+	font-size: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+	.development-intro h3 {
+		font-size: 2.25rem;
+	}
+}
+
+.development-intro p {
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+	.development-intro p {
+		font-size: 1.25rem;
+	}
+}
+
+.design-block {
+	padding: 0 1em;
+	margin: 0 0 2em;
+}
+
+@media screen and (min-width: 600px) {
+	.design-block {
+		max-width: 1210px;
+		margin: 0 auto 3em;
+		-webkit-column-count: 2;
+		        column-count: 2;
+		-webkit-column-gap: 10px;
+		        column-gap: 10px;
+	}
+}
+
+@media screen and (min-width: 1250px) {
+	.design-block {
+		padding: 0;
+	}
+}
+
+.design-block .website {
+	position: relative;
+	display: block;
+}
+
+@media screen and (min-width: 600px) {
+	.design-block .website {
+		display: inline-block;
+		margin: 0 0 2px;
+		width: 100%;
+	}
+}
+
+.design-block .website:hover .website-link img, .design-block .website:focus .website-link img {
+	-webkit-filter: brightness(100%);
+	        filter: brightness(100%);
+}
+
+.design-block .website:hover .website-info, .design-block .website:focus .website-info {
+	-webkit-transform: translateY(-25px);
+	        transform: translateY(-25px);
+}
+
+.design-block .website .website-link {
+	display: inline-block;
+}
+
+.design-block .website .website-link img {
+	display: block;
+	-webkit-filter: brightness(50%);
+	        filter: brightness(50%);
+	transition: -webkit-filter .25s ease-out;
+	transition: filter .25s ease-out;
+	transition: filter .25s ease-out, -webkit-filter .25s ease-out;
+}
+
+.design-block .website .website-info {
+	position: absolute;
+	left: 0;
+	bottom: 10%;
+	margin: 0 1em 0 1em;
+	transition: -webkit-transform .25s ease-out;
+	transition: transform .25s ease-out;
+	transition: transform .25s ease-out, -webkit-transform .25s ease-out;
+}
+
+@media screen and (min-width: 600px) {
+	.design-block .website .website-info {
+		margin: 0 1em 0 2em;
+	}
+}
+
+.design-block .website .website-info h5 {
+	color: #3ec73e;
+	margin: 0;
+	font-weight: 400;
+	font-size: 1.3rem;
+}
+
+@media screen and (min-width: 600px) {
+	.design-block .website .website-info h5 {
+		font-size: 1.65rem;
+	}
+}
+
+.design-block .website .website-info p {
+	color: #fff;
+	margin: 0;
+}
+
+.studies-block {
+	margin: 2em 0;
+}
+
+@media screen and (min-width: 600px) {
+	.studies-block {
+		margin: 4em auto;
+		max-width: 1200px;
+	}
+}
+
+.studies-block .individual-case {
+	display: block;
+}
+
+@media screen and (min-width: 600px) {
+	.studies-block .individual-case {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+}
+
+.studies-block .individual-case .individual-content {
+	width: 100%;
+	padding: 0 1em;
+	margin: 0 0 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.studies-block .individual-case .individual-content {
+		padding: 0 2em;
+		width: 50%;
+		margin: 0;
+	}
+}
+
+.studies-block .individual-case .individual-content .study-title {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.75);
+	font-style: italic;
+}
+
+@media screen and (min-width: 600px) {
+	.studies-block .individual-case .individual-content .study-title {
+		font-size: 2.25rem;
+	}
+}
+
+.studies-block .individual-case .individual-content .study-description {
+	font-size: .95rem;
+	word-spacing: .01em;
+	line-height: 1.6;
+	color: #777;
+}
+
+@media screen and (min-width: 600px) {
+	.studies-block .individual-case .individual-content .study-description {
+		font-size: 1.1rem;
+	}
+}
+
+.studies-block .individual-case .individual-content .study-roles-text {
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.75);
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+	.studies-block .individual-case .individual-content .study-roles-text {
+		font-size: 1.25rem;
+	}
+}
+
+.studies-block .individual-case .individual-content .study-roles {
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+	.studies-block .individual-case .individual-content .study-roles {
+		font-size: 1.1rem;
+	}
+}
+
+.studies-block .individual-case .individual-content a {
+	background: #3ec73e;
+	display: inline-block;
+	padding: 8px 20px;
+	text-decoration: none;
+	color: #fff;
+	font-size: .8rem;
+	font-family: "Montserrat", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	border: 2px solid #3ec73e;
+	transition: background .25s linear, border-color .25s linear;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+	.studies-block .individual-case .individual-content a {
+		padding: 12px 25px;
+		font-size: .9rem;
+	}
+}
+
+.studies-block .individual-case .individual-content a:hover, .studies-block .individual-case .individual-content a:focus {
+	background: transparent;
+	border-color: #3ec73e;
+	color: #3ec73e;
+}
+
+.studies-block .individual-case .individual-image {
+	width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+	.studies-block .individual-case .individual-image {
+		width: 50%;
+	}
+}
+
+.studies-block .individual-case .individual-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.case-study-achievements {
+	display: block;
+	text-align: center;
+	margin: 2em 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-achievements {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+		max-width: 1200px;
+		margin: 4em auto;
+	}
+}
+
+.case-study-achievements .achievement {
+	margin: 2em 0 0;
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-achievements .achievement {
+		margin: 0;
+	}
+}
+
+.case-study-achievements .achievement .achievement-stat {
+	color: #3ec73e;
+	font-size: 2rem;
+	margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-achievements .achievement .achievement-stat {
+		font-size: 2.5rem;
+	}
+}
+
+.case-study-achievements .achievement .achievement-text {
+	font-size: .9rem;
+	margin: 0;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-achievements .achievement .achievement-text {
+		font-size: 1rem;
+	}
+}
+
+.case-study-testimonials {
+	background: #f7f7f7;
+	padding: 3em 2em;
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-testimonials {
+		padding: 3em 4em;
+	}
+}
+
+.case-study-testimonials .testimonial-quote {
+	max-width: 700px;
+	margin: 0 auto;
+	font-size: 1.1rem;
+	padding: 0;
+	position: relative;
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-testimonials .testimonial-quote {
+		font-size: 1.5rem;
+	}
+}
+
+.case-study-testimonials .testimonial-byline {
+	max-width: 700px;
+	margin: 1em auto 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.case-study-testimonials .testimonial-byline img {
+	border-radius: 50%;
+	margin-right: 1em;
+}
+
+.case-study-testimonials .testimonial-byline .author-name {
+	margin: .5em 0 0;
+	color: rgba(0, 0, 0, 0.75);
+	font-weight: 700;
+}
+
+.case-study-testimonials .testimonial-byline .author-position {
+	margin: .5em 0 0;
+	font-style: italic;
+}
+
+.study-challenge-solution-container {
+	background: #fff;
+}
+
+.study-challenge-solution-container .study-challenge-solution {
+	margin: 4em auto 0;
+	padding-bottom: 4em;
+}
+
+@media screen and (min-width: 600px) {
+	.study-challenge-solution-container .study-challenge-solution {
+		max-width: 1200px;
+		margin: 4em auto 0;
+	}
+}
+
+.study-challenge-solution-container .study-challenge-solution .challenge-solution-intro {
+	text-align: center;
+	color: #3ec73e;
+	font-size: 1.25rem;
+	font-weight: 400;
+	margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+	.study-challenge-solution-container .study-challenge-solution .challenge-solution-intro {
+		font-size: 1.75rem;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.study-challenge-solution-container .study-challenge-solution .challenge-solution-intro {
+		font-size: 2.5rem;
+	}
+}
+
+.study-challenge-solution-container .study-challenge-solution .study-challenge-section {
+	margin: 2em 0;
+}
+
+@media screen and (min-width: 600px) {
+	.study-challenge-solution-container .study-challenge-solution .study-challenge-section {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		margin: 4em 0;
+	}
+}
+
+.study-challenge-solution-container .study-challenge-solution .study-challenge-section .study-challenge-text {
+	padding: 0 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.study-challenge-solution-container .study-challenge-solution .study-challenge-section .study-challenge-text {
+		width: 50%;
+		padding: 0 2em;
+	}
+}
+
+.study-challenge-solution-container .study-challenge-solution .study-challenge-section .study-challenge-text .challenge {
+	font-style: italic;
+	font-size: 1.1rem;
+}
+
+@media screen and (min-width: 600px) {
+	.study-challenge-solution-container .study-challenge-solution .study-challenge-section .study-challenge-text .challenge {
+		font-size: 1.25rem;
+	}
+}
+
+.study-challenge-solution-container .study-challenge-solution .study-challenge-section .study-challenge-text .challenge-content {
+	line-height: 1.6;
+}
+
+@media screen and (min-width: 600px) {
+	.study-challenge-solution-container .study-challenge-solution .study-challenge-section .study-challenge-image {
+		width: 50%;
+	}
+}
+
+.study-challenge-solution-container .study-challenge-solution .study-challenge-section .study-challenge-image img {
+	display: block;
+	margin: 2em auto;
+}
+
+@media screen and (min-width: 600px) {
+	.study-challenge-solution-container .study-challenge-solution .study-challenge-section .study-challenge-image img {
+		margin: 0 auto;
+	}
+}
+
+.study-challenge-solution-container .study-challenge-solution .study-solution-section {
+	padding: 0 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.study-challenge-solution-container .study-challenge-solution .study-solution-section {
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 0;
+	}
+}
+
+.study-challenge-solution-container .study-challenge-solution .study-solution-section .solution {
+	font-style: italic;
+	font-size: 1.1rem;
+}
+
+@media screen and (min-width: 600px) {
+	.study-challenge-solution-container .study-challenge-solution .study-solution-section .solution {
+		font-size: 1.25rem;
+	}
+}
+
+.study-challenge-solution-container .study-challenge-solution .study-solution-section .solution-content {
+	line-height: 1.6;
+}
+
+.postid-810.single-case_studies .site {
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-perspective: 1px;
+	        perspective: 1px;
+	height: 100vh;
+	width: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective-origin-x: 100%;
+}
+
+.postid-810.single-case_studies .site .parallax-img {
+	position: relative;
+	height: calc( 100vw - 100vw/1.95);
+	transform-origin-x: 100%;
+}
+
+@media screen and (min-width: 900px) {
+	.postid-810.single-case_studies .site .parallax-img {
+		height: calc( 100vw - 100vw/1.85);
+	}
+}
+
+.postid-810.single-case_studies .site .parallax-img:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transform: translateZ(-1px) scale(2);
+	        transform: translateZ(-1px) scale(2);
+	background: url("https://kelcherpromotions.com/wp-content/uploads/2018/05/tribal-gauges-parallax-img.jpg");
+	background-size: 100%;
+	height: calc( 100vw - 100vw/1.95);
+	width: 100%;
+	z-index: -1;
+	transform-origin-x: 100%;
+}
+
+@media screen and (min-width: 900px) {
+	.postid-810.single-case_studies .site .parallax-img:after {
+		height: calc( 100vw - 100vw/1.85);
+	}
+}
+
+.study-brand-images-container {
+	background: #fff;
+	padding: 0 20px 0;
+}
+
+@media screen and (min-width: 800px) {
+	.study-brand-images-container {
+		padding: 0 50px 0;
+	}
+}
+
+.study-brand-images-container .study-brand-images {
+	margin: 0 auto;
+	padding: 4em 0;
+	text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+	.study-brand-images-container .study-brand-images {
+		max-width: 1200px;
+	}
+}
+
+.study-brand-images-container .study-brand-images img {
+	display: inline-block;
+}
+
+@media screen and (min-width: 800px) {
+	.study-brand-images-container .study-brand-images img {
+		width: 46%;
+	}
+}
+
+.study-brand-images-container .study-brand-images img:nth-child(2) {
+	margin-top: 50px;
+}
+
+@media screen and (min-width: 800px) {
+	.study-brand-images-container .study-brand-images img:nth-child(2) {
+		margin-left: 50px;
+		margin-top: 0;
+	}
+}
+
+.case-study-contact {
+	background: #333;
+	padding: 50px 1em;
+	color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+	.case-study-contact {
+		text-align: center;
+	}
+}
+
+.case-study-contact .get-in-touch {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-contact .get-in-touch {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+}
+
+.case-study-contact .get-in-touch h4 {
+	font-weight: 400;
+	font-style: italic;
+	font-size: 1.25rem;
+	margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-contact .get-in-touch h4 {
+		font-size: 1.5rem;
+	}
+}
+
+.case-study-contact .get-in-touch a {
+	background: #3ec73e;
+	padding: 8px 20px;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	font-size: .75rem;
+	font-family: "Montserrat", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	border: 2px solid #3ec73e;
+	transition: background .25s linear, border-color .25s linear;
+	margin: 1em 0;
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-contact .get-in-touch a {
+		padding: 12px 25px;
+		font-size: .8rem;
+		margin: 0 0 0 auto;
+	}
+}
+
+.case-study-contact .get-in-touch a:hover, .case-study-contact .get-in-touch a:focus {
+	background: transparent;
+	border-color: #3ec73e;
+	color: #3ec73e;
+}
+
+@media screen and (min-width: 600px) {
+	.case-study-contact .contact-blurb {
+		max-width: 1200px;
+		margin: 1em auto;
+	}
+}
+
+.case-study-performance {
+	margin: 4em auto;
+	text-align: center;
+	max-width: 1200px;
+	padding: 0 1em;
+}
+
+.case-study-performance h3 {
+	color: #3ec73e;
+	margin: 0;
+}
+
+.case-study-performance p {
+	line-height: 1.6;
+	margin: 2em auto;
+}
+
+@media screen and (min-width: 900px) {
+	.case-study-performance p {
+		max-width: 900px;
+	}
+}
+
+.case-study-performance img {
+	display: block;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+## Services Page
 --------------------------------------------------------------*/
 .seo-service-list {
 	display: block;
@@ -2380,8 +3146,94 @@ Header Menu
 	margin: 1em 0;
 }
 
+.visual-list {
+	max-width: 1150px;
+	margin: 0 auto 4em;
+}
+
+.visual-list h3 {
+	text-align: center;
+	margin: 0;
+	color: #3ec73e;
+}
+
+.visual-list .individual-visual-service {
+	display: block;
+	margin-top: 3em;
+	background: #f7f7f7;
+}
+
+@media screen and (min-width: 600px) {
+	.visual-list .individual-visual-service {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+}
+
+.visual-list .individual-visual-service img {
+	display: block;
+}
+
+@media screen and (min-width: 600px) {
+	.visual-list .individual-visual-service img {
+		width: 50%;
+	}
+}
+
+.visual-list .individual-visual-service div {
+	padding: 2em;
+}
+
+.visual-list .individual-visual-service div h2 {
+	font-size: 1.25rem;
+	font-style: italic;
+	font-weight: 400;
+	margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+	.visual-list .individual-visual-service div h2 {
+		font-size: 1.5rem;
+	}
+}
+
+.visual-list .individual-visual-service div p {
+	line-height: 1.7;
+	word-spacing: .025em;
+	margin: 1em 0;
+}
+
+.design-page a {
+	background: #3ec73e;
+	padding: 8px 20px;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	font-size: .8rem;
+	font-family: "Montserrat", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	border: 2px solid #3ec73e;
+	transition: background .25s linear, border-color .25s linear;
+}
+
+@media screen and (min-width: 600px) {
+	.design-page a {
+		padding: 12px 25px;
+		font-size: .9rem;
+	}
+}
+
+.design-page a:hover, .design-page a:focus {
+	background: transparent;
+	border-color: #3ec73e;
+	color: #3ec73e;
+}
+
 /*--------------------------------------------------------------
-## Promotions Page
+## Top Level Page
 --------------------------------------------------------------*/
 .services-block {
 	display: -webkit-box;
@@ -2518,10 +3370,20 @@ Header Menu
 	bottom: -5px;
 	content: "";
 	display: block;
-	height: 7.5px;
+	height: 3.5px;
 	position: relative;
-	width: 100px;
+	width: 80px;
 	margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+	.work-web-block .work-web-design h2:after,
+	.work-web-block .work-case-study h2:after,
+	.work-studies-block .work-web-design h2:after,
+	.work-studies-block .work-case-study h2:after {
+		height: 7.5px;
+		width: 100px;
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -2894,6 +3756,178 @@ Header Menu
 
 body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapper.gform_validation_error .top_label select.medium {
 	width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Top Level Page
+--------------------------------------------------------------*/
+.login-content {
+	height: calc(100vh - 75px);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background-color: #0d83dd;
+	color: #fff;
+	text-align: center;
+	font-family: arial, sans-serif;
+	padding: 20px 0;
+}
+
+@media screen and (min-width: 600px) {
+	.login-content {
+		padding: 50px 0;
+	}
+}
+
+.login-content img {
+	display: block;
+}
+
+.login-content h3 {
+	margin: 1em 0;
+	font-family: arial, sans-serif;
+}
+
+.login-content .wppb-user-forms {
+	font-family: arial, sans-serif;
+}
+
+.login-content .wppb-user-forms #loginform .login-username,
+.login-content .wppb-user-forms #loginform .login-password {
+	padding-bottom: 10px;
+}
+
+.login-content .wppb-user-forms #loginform .login-username input[type="text"],
+.login-content .wppb-user-forms #loginform .login-username input[type="password"],
+.login-content .wppb-user-forms #loginform .login-password input[type="text"],
+.login-content .wppb-user-forms #loginform .login-password input[type="password"] {
+	border-radius: 4px;
+	display: block;
+	margin-top: 10px;
+	padding: 14px 18px;
+	width: 100%;
+	font-size: 1.25rem;
+	margin: 0;
+}
+
+.login-content .wppb-user-forms input[type="submit"] {
+	width: 100%;
+	font-family: arial, sans-serif;
+	border-color: #3ec73e;
+	background: #3ec73e;
+	color: #fff;
+	font-size: 1.25rem;
+	border-radius: 4px;
+	display: block;
+	margin-top: 10px;
+	padding: 14px 18px;
+}
+
+.login-content #wppb-login-wrap p {
+	padding: 0;
+}
+
+.login-content #wppb-login-wrap p.login-register-lost-password {
+	margin-top: .5em;
+}
+
+.login-content #wppb-login-wrap p.login-register-lost-password a {
+	color: #fff;
+}
+
+.register-content {
+	height: calc(100vh - 75px);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background-color: #0d83dd;
+	text-align: center;
+	font-family: arial, sans-serif;
+	padding: 25px;
+}
+
+@media screen and (min-width: 600px) {
+	.register-content {
+		padding: 50px;
+	}
+}
+
+.register-content .register-container {
+	padding: 16px 10px;
+	background: #fff;
+}
+
+@media screen and (min-width: 600px) {
+	.register-content .register-container {
+		max-width: 500px;
+		padding: 48px 40px;
+	}
+}
+
+.register-content img {
+	display: block;
+	margin: 0 auto;
+}
+
+.register-content h3 {
+	margin: 1em 0;
+	font-family: arial, sans-serif;
+	font-size: 1.25rem;
+}
+
+@media screen and (min-width: 600px) {
+	.register-content h3 {
+		font-size: 1.5rem;
+	}
+}
+
+.register-content .wppb-user-forms {
+	font-family: arial, sans-serif;
+}
+
+.register-content .wppb-user-forms ul li {
+	padding-bottom: 10px;
+}
+
+.register-content .wppb-user-forms input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
+	border-radius: 4px;
+	display: block;
+	margin-top: 10px;
+	padding: 6px 10px;
+	width: 100%;
+	font-size: 1rem;
+	margin: 0;
+}
+
+.register-content .wppb-user-forms input[type="submit"] {
+	width: 100%;
+	font-family: arial, sans-serif;
+	border-color: #3ec73e;
+	background: #3ec73e;
+	color: #fff;
+	font-size: 1.25rem;
+	border-radius: 4px;
+	display: block;
+	margin-top: 10px;
+	padding: 14px 18px;
+}
+
+.register-content .wppb-user-forms ul li.wppb-send-credentials-checkbox {
+	display: none;
 }
 
 /*--------------------------------------------------------------
