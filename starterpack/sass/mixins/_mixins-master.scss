@@ -151,8 +151,7 @@ $parallax-ios         : true !default;
     position: relative;
     height: calc( 100vw - 100vw/1.95 );
     transform-origin-x: 100%;
-     -webkit-overflow-scrolling: touch;
-
+    
     @media screen and (min-width: 900px) {
       height: calc( 100vw - 100vw/1.85 );
     }
@@ -169,7 +168,6 @@ $parallax-ios         : true !default;
     height: calc( 100vw - 100vw/1.95 );
     width: 100%;
     z-index: -1;
-     -webkit-overflow-scrolling: touch;
     transform-origin-x: 100%;
 
     @media screen and (min-width: 900px) {

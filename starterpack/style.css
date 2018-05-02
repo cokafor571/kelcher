@@ -2825,48 +2825,60 @@ Header Menu
 	line-height: 1.6;
 }
 
-.postid-810.single-case_studies .site {
-	-webkit-transform-style: preserve-3d;
-	        transform-style: preserve-3d;
-	-webkit-perspective: 1px;
-	        perspective: 1px;
-	height: 100vh;
-	width: auto;
-	overflow-x: hidden;
-	overflow-y: auto;
-	perspective-origin-x: 100%;
+@media screen and (min-width: 769px) {
+	.postid-810.single-case_studies .site {
+		-webkit-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+		-webkit-perspective: 1px;
+		        perspective: 1px;
+		height: 100vh;
+		width: auto;
+		overflow-x: hidden;
+		overflow-y: auto;
+		perspective-origin-x: 100%;
+	}
 }
 
-.postid-810.single-case_studies .site .parallax-img {
-	position: relative;
-	height: calc( 100vw - 100vw/1.95);
-	transform-origin-x: 100%;
-	-webkit-overflow-scrolling: touch;
+@media screen and (max-width: 769px) {
+	.postid-810.single-case_studies .site .parallax-img {
+		background: url("https://kelcherpromotions.com/wp-content/uploads/2018/05/tribal-gauges-parallax-img.jpg") no-repeat center center;
+		height: 350px;
+		background-size: cover;
+	}
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 769px) {
+	.postid-810.single-case_studies .site .parallax-img {
+		position: relative;
+		height: calc( 100vw - 100vw/1.95);
+		transform-origin-x: 100%;
+	}
+}
+
+@media screen and (min-width: 769px) and (min-width: 900px) {
 	.postid-810.single-case_studies .site .parallax-img {
 		height: calc( 100vw - 100vw/1.85);
 	}
 }
 
-.postid-810.single-case_studies .site .parallax-img:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	-webkit-transform: translateZ(-1px) scale(2);
-	        transform: translateZ(-1px) scale(2);
-	background: url("https://kelcherpromotions.com/wp-content/uploads/2018/05/tribal-gauges-parallax-img.jpg");
-	background-size: 100%;
-	height: calc( 100vw - 100vw/1.95);
-	width: 100%;
-	z-index: -1;
-	-webkit-overflow-scrolling: touch;
-	transform-origin-x: 100%;
+@media screen and (min-width: 769px) {
+	.postid-810.single-case_studies .site .parallax-img:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		-webkit-transform: translateZ(-1px) scale(2);
+		        transform: translateZ(-1px) scale(2);
+		background: url("https://kelcherpromotions.com/wp-content/uploads/2018/05/tribal-gauges-parallax-img.jpg");
+		background-size: 100%;
+		height: calc( 100vw - 100vw/1.95);
+		width: 100%;
+		z-index: -1;
+		transform-origin-x: 100%;
+	}
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 769px) and (min-width: 900px) {
 	.postid-810.single-case_studies .site .parallax-img:after {
 		height: calc( 100vw - 100vw/1.85);
 	}

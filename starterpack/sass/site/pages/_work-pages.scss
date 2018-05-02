@@ -400,10 +400,22 @@
 .postid-810.single-case_studies {
 
     .site {
-        @include parallax-init;
+
+        @media screen and (min-width: $query__tablet) {
+            @include parallax-init;
+        }
 
         .parallax-img {
-            @include parallax ( "https://kelcherpromotions.com/wp-content/uploads/2018/05/tribal-gauges-parallax-img.jpg" );
+
+            @media screen and (max-width: $query__tablet) {
+                background: url( "https://kelcherpromotions.com/wp-content/uploads/2018/05/tribal-gauges-parallax-img.jpg" ) no-repeat center center;
+                height: 350px;
+                background-size: cover;
+            }
+
+            @media screen and (min-width: $query__tablet) {
+                @include parallax ( "https://kelcherpromotions.com/wp-content/uploads/2018/05/tribal-gauges-parallax-img.jpg" );
+            }
         }
     }
 }
