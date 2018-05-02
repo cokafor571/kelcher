@@ -33,13 +33,13 @@
 
                     the_custom_logo(); ?>
 
-                    <a href="http://kelcher.test/" class="custom-logo-link" rel="home" itemprop="url">
-                        <img src="http://kelcher.test/wp-content/uploads/2018/04/kelcher_logo_black.png" class="custom-logo-black" alt="kelcher promotions logo" itemprop="logo">
+                    <a href="https://kelcherpromotions.com/" class="custom-logo-link" rel="home" itemprop="url">
+                        <img src="https://kelcherpromotions.com/wp-content/uploads/2018/04/kelcher_logo_black.png" class="custom-logo-black" alt="kelcher promotions logo" itemprop="logo">
                     </a>
 
                 <?php } else { ?>
-                    <a href="http://kelcher.test/" class="custom-logo-link" rel="home" itemprop="url">
-                        <img src="http://kelcher.test/wp-content/uploads/2018/04/kelcher_logo_black.png" class="custom-logo-black" alt="kelcher promotions logo" itemprop="logo">
+                    <a href="https://kelcherpromotions.com/" class="custom-logo-link" rel="home" itemprop="url">
+                        <img src="https://kelcherpromotions.com/wp-content/uploads/2018/04/kelcher_logo_black.png" class="custom-logo-black" alt="kelcher promotions logo" itemprop="logo">
                     </a>
                 <?php } ?>
 

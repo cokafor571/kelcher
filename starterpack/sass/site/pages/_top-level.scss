@@ -151,30 +151,55 @@
     margin: 4em 0;
 
     .team-header {
-        background-attachment: fixed;
-        height: 350px;
+        height: 250px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 4em;
 
+        @media screen and (min-width: $query__small) {
+            background-attachment: fixed;
+            height: 350px;
+        }
+
         h3 {
             color: #fff;
-            font-size: 3rem;
+            font-size: 2rem;
             margin: 0;
             text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+            @media screen and (min-width: $query__small) {
+                font-size: 3rem;
+            }
         }
     }
 
     .team-members {
-        max-width: 1150px;
+        display: block;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
+
+        @media screen and (min-width: 800px) {
+            max-width: 1150px;
+            display: flex;
+            justify-content: space-around;
+        }
 
         img {
             display: block;
-            max-width: 350px;
+            margin: 0 auto;
+
+            @media screen and (min-width: 800px) {
+                max-width: 350px;
+            }
+        }
+
+        .individual-member {
+            text-align: center;
+            margin-top: 2em;
+
+            @media screen and (min-width: 800px) {
+                margin-top: 0;
+            }
         }
 
         .member-name {
