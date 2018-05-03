@@ -1,4 +1,6 @@
 (function( $ ) {
+
+    // Header BG Color
     $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop(),
             header = $('.site-header');
@@ -9,4 +11,5 @@
             header.removeClass('bg-color');
         }
     });
+
 })( jQuery );

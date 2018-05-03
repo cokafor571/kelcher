@@ -3900,6 +3900,29 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
 	color: #fff;
 }
 
+.login-content .customer-dash {
+	font-family: arial, sans-serif;
+	border-color: #3ec73e;
+	background: #3ec73e;
+	color: #fff;
+	font-size: 1.1rem;
+	border-radius: 4px;
+	display: inline-block;
+	margin-top: 10px;
+	padding: 14px 18px;
+}
+
+.login-content .customer-dash:hover, .login-content .customer-dash:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+	.login-content .customer-dash {
+		font-size: 1.25rem;
+	}
+}
+
 .register-content {
 	height: calc(100vh - 75px);
 	display: -webkit-box;
@@ -3986,6 +4009,122 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
 
 .register-content .wppb-user-forms ul li.wppb-send-credentials-checkbox {
 	display: none;
+}
+
+#wppb-recover-password-container {
+	height: calc(60vh - 75px);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background-color: #0d83dd;
+	color: #fff;
+	text-align: center;
+	font-family: arial, sans-serif;
+	padding: 25px 10px;
+}
+
+@media screen and (min-width: 600px) {
+	#wppb-recover-password-container {
+		padding: 50px 10px;
+	}
+}
+
+#wppb-recover-password-container .wppb-username-email {
+	border-radius: 4px;
+	display: block;
+	margin-top: 10px;
+	padding: 14px 0;
+	font-size: 1.25rem;
+	margin: 0;
+	font-family: arial, sans-serif;
+}
+
+#wppb-recover-password-container input[type="submit"] {
+	font-family: arial, sans-serif;
+	border-color: #3ec73e;
+	background: #3ec73e;
+	color: #fff;
+	font-size: 1.1rem;
+	border-radius: 4px;
+	display: block;
+	margin: 0 auto;
+	padding: 14px 18px;
+	font-family: arial, sans-serif;
+}
+
+@media screen and (min-width: 600px) {
+	#wppb-recover-password-container input[type="submit"] {
+		font-size: 1.25rem;
+	}
+}
+
+.wppb-edit-user {
+	height: calc(75vh - 75px);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background-color: #0d83dd;
+	color: #fff;
+	text-align: center;
+	font-family: arial, sans-serif;
+	padding: 25px 10px;
+}
+
+@media screen and (min-width: 600px) {
+	.wppb-edit-user {
+		padding: 50px 10px;
+	}
+}
+
+.wppb-edit-user ul {
+	margin-bottom: 0;
+}
+
+.wppb-edit-user .wppb-form-field .text-input {
+	border-radius: 4px;
+	display: block;
+	margin-top: 10px;
+	padding: 14px 18px;
+	font-size: 1.25rem;
+	margin: 0;
+	font-family: arial, sans-serif;
+}
+
+.wppb-edit-user .form-sumbit {
+	margin: 0;
+}
+
+.wppb-edit-user .submit.button {
+	font-family: arial, sans-serif;
+	border-color: #3ec73e;
+	background: #3ec73e;
+	color: #fff;
+	font-size: 1.1rem;
+	border-radius: 4px;
+	display: block;
+	margin: 0 auto;
+	padding: 14px 18px;
+	font-family: arial, sans-serif;
+}
+
+@media screen and (min-width: 600px) {
+	.wppb-edit-user .submit.button {
+		font-size: 1.25rem;
+	}
 }
 
 /*--------------------------------------------------------------

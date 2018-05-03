@@ -339,9 +339,22 @@ function starterpack_scripts() {
         wp_enqueue_script( 'starterpack-header-script', get_template_directory_uri() . '/js/header-script.js' );
     }
 
+    if ( is_page( 'Login' ) ) {
+        wp_enqueue_script( 'starterpack-login-script', get_template_directory_uri() . '/js/login-scripts.js' );
+    }
+
     wp_enqueue_style( 'fa-icons', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'starterpack_scripts' );
+
+
+/**
+* Customer Area Redirect After Logout
+*/
+function cuar_get_custom_logout_redirect_url( $current_url = null, $redirect_slug = 'customer-dashboard', $redirect_url = null ) {
+    return 'https://kelcherpromotions.com/login';
+}
+add_filter( 'cuar/routing/logout-url', 'cuar_get_custom_logout_redirect_url', 10, 3 );
 
 /**
  * Implement the Custom Header feature.

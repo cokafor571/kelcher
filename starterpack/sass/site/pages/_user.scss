@@ -66,6 +66,28 @@
             }
         }
     }
+
+    .customer-dash {
+        font-family: arial, sans-serif;
+        border-color: $color__site-green;
+        background: $color__site-green;
+        color: #fff;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 10px;
+        padding: 14px 18px;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media screen and (min-width: $query__small) {
+            font-size: 1.25rem;
+        }
+    }
 }
 
 .register-content {
@@ -140,5 +162,99 @@
 
     .wppb-user-forms ul li.wppb-send-credentials-checkbox {
         display: none;
+    }
+}
+
+#wppb-recover-password-container {
+    height: calc(60vh - 75px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0d83dd;
+    color: #fff;
+    text-align: center;
+    font-family: arial, sans-serif;
+    padding: 25px 10px;
+
+    @media screen and (min-width: $query__small) {
+        padding: 50px 10px;
+    }
+
+    .wppb-username-email {
+        border-radius: 4px;
+        display: block;
+        margin-top: 10px;
+        padding: 14px 0;
+        font-size: 1.25rem;
+        margin: 0;
+        font-family: arial, sans-serif;
+    }
+
+    input[type="submit"] {
+        font-family: arial, sans-serif;
+        border-color: $color__site-green;
+        background: $color__site-green;
+        color: #fff;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+        padding: 14px 18px;
+        font-family: arial, sans-serif;
+
+        @media screen and (min-width: $query__small) {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.wppb-edit-user {
+    height: calc(75vh - 75px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0d83dd;
+    color: #fff;
+    text-align: center;
+    font-family: arial, sans-serif;
+    padding: 25px 10px;
+
+    @media screen and (min-width: $query__small) {
+        padding: 50px 10px;
+    }
+
+    ul {    
+        margin-bottom: 0;
+    }
+
+    .wppb-form-field .text-input {
+        border-radius: 4px;
+        display: block;
+        margin-top: 10px;
+        padding: 14px 18px;
+        font-size: 1.25rem;
+        margin: 0;
+        font-family: arial, sans-serif;
+    }
+
+    .form-sumbit {
+        margin: 0;
+    }
+
+    .submit.button {
+        font-family: arial, sans-serif;
+        border-color: $color__site-green;
+        background: $color__site-green;
+        color: #fff;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+        padding: 14px 18px;
+        font-family: arial, sans-serif;
+
+        @media screen and (min-width: $query__small) {
+            font-size: 1.25rem;
+        }
     }
 }
