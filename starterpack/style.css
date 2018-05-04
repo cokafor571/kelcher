@@ -1883,6 +1883,14 @@ Header Menu
 	margin: 6em 0;
 }
 
+@media screen and (min-width: 900px) {
+	.intro-text {
+		opacity: 0;
+		-webkit-animation: appear 1.5s .25s ease-out forwards;
+		        animation: appear 1.5s .25s ease-out forwards;
+	}
+}
+
 .intro-text h1 {
 	font-size: 1.25rem;
 	margin: .5em .25em;
@@ -1932,6 +1940,27 @@ Header Menu
 	text-align: center;
 	padding: 0 2em;
 	margin: 1em auto;
+}
+
+@media screen and (min-width: 900px) {
+	.home-approach .approach-block {
+		opacity: 0;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.home-approach .approach-block.animate-element:nth-child(1) {
+		-webkit-animation: appear 1.5s .25s ease-out forwards;
+		        animation: appear 1.5s .25s ease-out forwards;
+	}
+	.home-approach .approach-block.animate-element:nth-child(2) {
+		-webkit-animation: appear 1.5s .5s ease-out forwards;
+		        animation: appear 1.5s .5s ease-out forwards;
+	}
+	.home-approach .approach-block.animate-element:nth-child(3) {
+		-webkit-animation: appear 1.5s .75s ease-out forwards;
+		        animation: appear 1.5s .75s ease-out forwards;
+	}
 }
 
 .home-approach .approach-block .approach-title {
@@ -1985,11 +2014,28 @@ Header Menu
 	}
 }
 
+@media screen and (min-width: 900px) {
+	.home-services .full-service-list.animate-element h3 {
+		-webkit-animation: appear 1.5s .5s ease-out forwards;
+		        animation: appear 1.5s .5s ease-out forwards;
+	}
+	.home-services .full-service-list.animate-element a {
+		-webkit-animation: appear 1.5s .75s ease-out forwards;
+		        animation: appear 1.5s .75s ease-out forwards;
+	}
+}
+
 .home-services .full-service-list h3 {
 	color: #fff;
 	font-size: 2.5rem;
 	margin: 0 0 .5em;
 	text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 900px) {
+	.home-services .full-service-list h3 {
+		opacity: 0;
+	}
 }
 
 .home-services .full-service-list a {
@@ -2010,6 +2056,12 @@ Header Menu
 	.home-services .full-service-list a {
 		padding: 12px 48px;
 		font-size: .75rem;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.home-services .full-service-list a {
+		opacity: 0;
 	}
 }
 
@@ -2060,8 +2112,76 @@ Header Menu
 	}
 }
 
-.home-services .individual-services .individual-service:hover, .home-services .individual-services .individual-service:focus {
-	background: #2E8B57;
+@media screen and (min-width: 900px) {
+	.home-services .individual-services .individual-service {
+		opacity: 0;
+	}
+}
+
+.home-services .individual-services .individual-service:nth-child(1):hover, .home-services .individual-services .individual-service:nth-child(1):focus {
+	background: #ff5941;
+}
+
+@media screen and (min-width: 900px) {
+	.home-services .individual-services .individual-service:nth-child(1).animate-element {
+		-webkit-animation: appear 1.5s .25s ease-out forwards;
+		        animation: appear 1.5s .25s ease-out forwards;
+	}
+}
+
+.home-services .individual-services .individual-service:nth-child(2):hover, .home-services .individual-services .individual-service:nth-child(2):focus {
+	background: #38bcae;
+}
+
+@media screen and (min-width: 900px) {
+	.home-services .individual-services .individual-service:nth-child(2).animate-element {
+		-webkit-animation: appear 1.5s .5s ease-out forwards;
+		        animation: appear 1.5s .5s ease-out forwards;
+	}
+}
+
+.home-services .individual-services .individual-service:nth-child(3):hover, .home-services .individual-services .individual-service:nth-child(3):focus {
+	background: #2bb673;
+}
+
+@media screen and (min-width: 900px) {
+	.home-services .individual-services .individual-service:nth-child(3).animate-element {
+		-webkit-animation: appear 1.5s .75s ease-out forwards;
+		        animation: appear 1.5s .75s ease-out forwards;
+	}
+}
+
+.home-services .individual-services .individual-service:nth-child(4):hover, .home-services .individual-services .individual-service:nth-child(4):focus {
+	background: #fbb041;
+}
+
+@media screen and (min-width: 900px) {
+	.home-services .individual-services .individual-service:nth-child(4).animate-element {
+		-webkit-animation: appear 1.5s .25s ease-out forwards;
+		        animation: appear 1.5s .25s ease-out forwards;
+	}
+}
+
+.home-services .individual-services .individual-service:nth-child(5):hover, .home-services .individual-services .individual-service:nth-child(5):focus {
+	background: #0788eb;
+}
+
+@media screen and (min-width: 900px) {
+	.home-services .individual-services .individual-service:nth-child(5).animate-element {
+		-webkit-animation: appear 1.5s .5s ease-out forwards;
+		        animation: appear 1.5s .5s ease-out forwards;
+	}
+}
+
+.home-services .individual-services .individual-service:nth-child(6):hover, .home-services .individual-services .individual-service:nth-child(6):focus {
+	background: #4f3378;
+}
+
+@media screen and (min-width: 900px) {
+	.home-services .individual-services .individual-service:nth-child(6).animate-element {
+		-webkit-animation: appear 1.5s .75s ease-out forwards;
+		        animation: appear 1.5s .75s ease-out forwards;
+	}
 }
 
 .home-services .individual-services .individual-service:hover .animated-field, .home-services .individual-services .individual-service:focus .animated-field {
@@ -2126,6 +2246,16 @@ Header Menu
 	        flex-direction: column-reverse;
 	max-width: 1150px;
 	margin: 3em auto;
+}
+
+@media screen and (min-width: 900px) {
+	.home-work-section {
+		opacity: 0;
+	}
+	.home-work-section.animate-element {
+		-webkit-animation: appear 1.5s .5s ease-out forwards;
+		        animation: appear 1.5s .5s ease-out forwards;
+	}
 }
 
 .home-work-section .home-work-text {
@@ -2200,6 +2330,16 @@ Header Menu
 	        flex-direction: column-reverse;
 	max-width: 1150px;
 	margin: 3em auto;
+}
+
+@media screen and (min-width: 900px) {
+	.home-brands-section {
+		opacity: 0;
+	}
+	.home-brands-section.animate-element {
+		-webkit-animation: appear 1.5s .5s ease-out forwards;
+		        animation: appear 1.5s .5s ease-out forwards;
+	}
 }
 
 .home-brands-section .home-brand-text {
