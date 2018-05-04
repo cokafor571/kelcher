@@ -1,6 +1,6 @@
 (function( $ ) {
 
-    if ($(window).width() > 900) {
+    if ($(window).width() >= 870) {
 
         var $window = $( window );
             
