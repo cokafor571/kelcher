@@ -10,6 +10,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	cleanCss = require( 'gulp-clean-css' ), 
+	rename = require('gulp-rename'),
 	concat = require( 'gulp-concat' ), 
 	uglify = require( 'gulp-uglify' ), 
 
@@ -38,9 +39,23 @@ gulp.task('css', function() {
 	]))
 	.pipe(sourcemaps.write(scss + 'maps'))
 	//.pipe(cleanCss() )
-	//.pipe(rename({
-	//	suffix: '.min'
-	//}))
+	.pipe(gulp.dest(root));
+});
+
+// Minify css for production
+gulp.task('cssmini', function() {
+	return gulp.src(scss + '{style.scss,rtl.scss}')
+	.pipe(sourcemaps.init())
+	.pipe(sass({
+		outputStyle: 'expanded', 
+		indentType: 'tab',
+		indentWidth: '1'
+	}).on('error', sass.logError))
+	.pipe(postcss([
+		autoprefixer('last 2 versions', '> 1%')
+	]))
+	.pipe(sourcemaps.write(scss + 'maps'))
+	.pipe(cleanCss())
 	.pipe(gulp.dest(root));
 });
 
@@ -52,15 +67,52 @@ gulp.task('images', function() {
 	.pipe(gulp.dest(img));
 });
 
-// JavaScript
-//gulp.task('javascript', function() {
-	//return gulp.src([js + '*.js'])
-	//.pipe(jshint())
-	//.pipe(jshint.reporter('default'))
-	//.pipe(uglify() )
-	//.pipe(gulp.dest(js));
-//});
+//Javascript production front page
+gulp.task('jsfp', function() {
+	return gulp.src([
+		js + 'functions.js',
+		js + 'scroll-scripts.js',
+		js + 'header-script.js',
+		js + 'skip-link-focus-fix.js'
+	])
+	.pipe(concat('fpscripts.js'))
+	.pipe(gulp.dest(js))
+	.pipe(rename('fpscripts.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest(js));
+});
 
+//Javascript production all other pages
+gulp.task('jspages', function() {
+	return gulp.src([
+		js + 'functions.js',
+		js + 'skip-link-focus-fix.js'
+	])
+	.pipe(concat('scripts.js'))
+	.pipe(gulp.dest(js))
+	.pipe(rename('scripts.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest(js));
+});
+
+//Javascript production minify misc js
+gulp.task('jsmini', function() {
+	return gulp.src([
+		js + 'navigation.js',
+		js + 'login-scripts.js'
+	])
+	.pipe(rename({ suffix: '.min' }))
+	.pipe(uglify())
+	.pipe(gulp.dest(js));
+});
+
+// JavaScript
+gulp.task('javascript', function() {
+	return gulp.src([js + '*.js'])
+	.pipe(jshint())
+	.pipe(jshint.reporter('default'))
+	.pipe(gulp.dest(js));
+});
 
 // Watch everything
 gulp.task('watch', function() {
