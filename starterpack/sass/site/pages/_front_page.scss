@@ -2,7 +2,7 @@
 .home-page {
 
     .home-header {
-        max-height: 525px;
+        max-height: 550px;
         overflow: hidden;
 
         .video-header {
@@ -24,8 +24,8 @@
                 width: 100%;
                 position: absolute;
 
-                @media screen and (min-width: 1000px) {
-                    top: -25px;
+                .ytp-watermark {
+                    display: none;
                 }
             }
 

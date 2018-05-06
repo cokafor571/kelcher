@@ -38,17 +38,14 @@ get_header(); ?>
 
 						// add extra params to iframe src
 						$params = array(
-							'controls'    => 0,
-							'loop'    => 1,
-							'disablekb'    => 1,
-							'showinfo'    => 0,
-							'modestbranding'    => 0,
-							'branding'    => 0,
-							'background'    => 1,
-							'rel'    => 0,
+							'modestbranding'    => 1,
 							'autoplay'    => 1,
-							'hd'        => 1,
-							'autohide'    => 1
+							'controls'    => 0,
+							'loop'        => 1,
+							'showinfo'    => 0,
+							'disablekb'   => 1,
+							'rel'         => 0,
+							'playlist'    => LABQgTZdgjs
 						);
 
 						$new_src = add_query_arg($params, $src);
@@ -70,6 +67,7 @@ get_header(); ?>
 							<?php if( get_field('home_header_title') ): ?>
 								<h1 class="title"><?php the_field('home_header_title'); ?></h1>
 							<?php endif;
+
 						 	if( get_field('home_header_tagline') ): ?>
 								<p class="tagline"><?php the_field('home_header_tagline'); ?></p>
 							<?php endif; ?>
@@ -1713,7 +1711,7 @@ get_header(); ?>
 				<div class="picture-header-mobile" style="background: url(<?php echo $imagem['url']; ?>) no-repeat center center; background-size:cover">
 
 					<?php if( get_field('studies_header_title') ): ?>
-						<h1 class="title"><?php the_field('studies_header_title'); ?></h1>
+						<h1 class="header-title"><?php the_field('studies_header_title'); ?></h1>
 					<?php endif;
 
 					if( get_field('studies_header_tagline') ): ?>

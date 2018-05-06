@@ -318,7 +318,7 @@ function starterpack_scripts() {
 
     /*
 	* Production scripts and css
-	*/
+	*
 	wp_enqueue_style( 'starterpack-fonts', starterpack_fonts_url() );
 
 	wp_enqueue_style( 'starterpack-style', get_stylesheet_uri() );
@@ -341,12 +341,11 @@ function starterpack_scripts() {
 
     if ( is_page( 'Login' ) && !wp_is_mobile() ) {
         wp_enqueue_script( 'starterpack-login-script', get_template_directory_uri() . '/js/login-scripts.min.js' );
-    }
+    } */
 
-    /*
-	* Development scripts and css
+	/* Development scripts and css
 	*
-	*
+	*/
     // Enque google fonts and font-awesome: Montserrat
     wp_enqueue_style( 'starterpack-fonts', starterpack_fonts_url() );
 
@@ -377,10 +376,8 @@ function starterpack_scripts() {
 
     if ( is_page( 'Login' ) ) {
         wp_enqueue_script( 'starterpack-login-script', get_template_directory_uri() . '/js/login-scripts.js' );
-    }
+    } 
 
-    *
-    */
 }
 add_action( 'wp_enqueue_scripts', 'starterpack_scripts' );
 

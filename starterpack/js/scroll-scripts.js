@@ -5,19 +5,19 @@
         var $window = $( window );
             
         var approach = $('.approach-block'),
-            approachMath = $('.approach-block').offset().top - 600;
+            approachMath = $('.approach-block').offset().top - 675;
 
         var serviceBlock = $('.full-service-list'),
-            serviceBlockMath = $('.full-service-list').offset().top - 600;
+            serviceBlockMath = $('.full-service-list').offset().top - 675;
 
         var individualService = $('.individual-service'),
-            individualServiceMath = $('.individual-service').offset().top - 400;
+            individualServiceMath = $('.individual-service').offset().top - 600;
 
         var homeWork = $('.home-work-section'),
-            homeWorkMath = $('.home-work-section').offset().top - 600;
+            homeWorkMath = $('.home-work-section').offset().top - 675;
 
         var homeBrands = $('.home-brands-section'),
-            homeBrandsMath = $('.home-brands-section').offset().top - 600;
+            homeBrandsMath = $('.home-brands-section').offset().top - 675;
 
         var scroll = function() { 
             scrollTop = $window.scrollTop();

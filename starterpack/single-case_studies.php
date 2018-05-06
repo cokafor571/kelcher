@@ -250,20 +250,24 @@ get_header(); ?>
 
 				</section> <!-- end case study contact -->
 
-				<section class="case-study-performance"> <!-- case study performance -->
+				<section class="case-study-performance-container">
 
-					<?php if( get_field('study_performance_intro') ): ?>
-						<h3><?php the_field('study_performance_intro'); ?></h3>
-					<?php endif; 
+					<div class="case-study-performance"> <!-- case study performance -->
 
-					if( get_field('study_performance_content') ): ?>
-						<p><?php the_field('study_performance_content'); ?></p>
-					<?php endif;
+						<?php if( get_field('study_performance_intro') ): ?>
+							<h3><?php the_field('study_performance_intro'); ?></h3>
+						<?php endif; 
 
-					$image = get_field('study_performance_image'); ?>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+						if( get_field('study_performance_content') ): ?>
+							<p><?php the_field('study_performance_content'); ?></p>
+						<?php endif;
 
-				</section> <!-- end case study performance -->
+						$image = get_field('study_performance_image'); ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+
+					</div> <!-- end case study performance -->
+
+				</section>
 				
 			</div> <!-- end our case study container -->
 
