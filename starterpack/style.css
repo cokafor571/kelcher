@@ -4269,6 +4269,10 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
 	}
 }
 
+#wppb_form_success_message, .wppb-success {
+	color: #333;
+}
+
 /*--------------------------------------------------------------
 ## Archives
 --------------------------------------------------------------*/
