@@ -5234,9 +5234,24 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
 	border-right: 1px solid rgba(128, 128, 128, 0.2);
 }
 
-.footer-widgets .widget_text:nth-of-type(2) span.email {
+.footer-widgets .widget_text:nth-of-type(2) a {
+	font-weight: 400;
+}
+
+.footer-widgets .widget_text:nth-of-type(2) a.email {
 	font-weight: 700;
 	color: #959595;
+}
+
+@media screen and (min-width: 769px) {
+	.footer-widgets .widget_text:nth-of-type(2) a {
+		cursor: text;
+	}
+}
+
+.footer-widgets .widget_text:nth-of-type(2) a:hover, .footer-widgets .widget_text:nth-of-type(2) a:focus {
+	text-decoration: none;
+	border: none;
 }
 
 .footer-widgets .widget_text:nth-of-type(3) .fa {

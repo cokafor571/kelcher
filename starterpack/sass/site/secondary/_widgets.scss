@@ -249,11 +249,22 @@
 				border-right: 1px solid rgba(128, 128, 128, 0.2);
 			}
 
-			span {
+			a {
+				font-weight: 400;
 
 				&.email {
 					font-weight: 700;
 					color: #959595;
+				}
+
+				@media screen and (min-width: $query__tablet) {
+					cursor: text;
+				}
+
+				&:hover,
+				&:focus {
+					text-decoration: none;
+					border: none;
 				}
 			}
 		}
