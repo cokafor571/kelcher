@@ -299,12 +299,11 @@
     background: #fff;
     
     .study-challenge-solution {
-        margin: 4em auto 0;
-        padding-bottom: 4em;
+        margin: 0 auto;
+        padding: 4em 0;
 
         @media screen and (min-width: $query__small) {
             max-width: 1200px;
-            margin: 4em auto 0;
         }
 
         .challenge-solution-intro {
