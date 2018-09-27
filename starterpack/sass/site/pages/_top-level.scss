@@ -494,13 +494,14 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
 
     .gform_body {
 
-        ul {
+        ul#gform_fields_4 {
             padding: 0;
             margin: 0;
             list-style: none;
 
             li {
                 padding: 0 0 1.15rem;
+                margin: 0;
 
                 label {
                     display: none;
@@ -516,6 +517,15 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
             #field_4_2,
             .name_first {
                 padding: 0 14px 0 0;
+            }
+
+            .name_last {
+                padding-top: 0;
+                padding-right: 0;
+            }
+
+            span {
+                margin-right: 0;
             }
 
             .ginput_container_name {
@@ -549,28 +559,41 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
                 padding: 21px 23px;
                 width: 100%;
                 font-size: .95rem;
+                margin: 0;
+            }
+
+            div.ginput_complex.ginput_container.gf_name_has_2 {
+                width: auto;
             }
         }
     }
 
-    .gform_footer {
+    .gform_footer.top_label {
+        margin: 0;
+        padding: 0;
+    }
 
-        input[type="submit"] {
-            width: 100%;
-            padding: 21px 23px;
-            font-size: .95rem;
-            color: #fff;
-            background: #fb554f;
-            font-weight: 700;
-            border-color: transparent;
-            transition: background .3s linear;
+    #gform_submit_button_4 {
+        width: 100%;
+        padding: 21px 23px;
+        font-size: .95rem;
+        color: #fff;
+        background: #fb554f;
+        font-weight: 700;
+        border-color: transparent;
+        transition: background .3s linear;
 
-            &:focus,
-            &:hover {
-                outline: none;
-                background: #c33325
-            }
+        &:focus,
+        &:hover {
+            outline: none;
+            background: #c33325
         }
+    }
+
+    .gform_confirmation_message {
+        color: #fb554f;
+        font-weight: 700;
+        font-size: 1.25rem;
     }
 }
 

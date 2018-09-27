@@ -157,7 +157,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php wp_footer(); ?>
 </body>
 </html>
-
-<?php ?>

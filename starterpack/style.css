@@ -4038,44 +4038,54 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
 	}
 }
 
-.website-sale-header .gform_body ul {
+.website-sale-header .gform_body ul#gform_fields_4 {
 	padding: 0;
 	margin: 0;
 	list-style: none;
 }
 
-.website-sale-header .gform_body ul li {
+.website-sale-header .gform_body ul#gform_fields_4 li {
 	padding: 0 0 1.15rem;
+	margin: 0;
 }
 
-.website-sale-header .gform_body ul li label {
+.website-sale-header .gform_body ul#gform_fields_4 li label {
 	display: none;
 }
 
-.website-sale-header .gform_body ul #field_4_2,
-.website-sale-header .gform_body ul #field_4_3 {
+.website-sale-header .gform_body ul#gform_fields_4 #field_4_2,
+.website-sale-header .gform_body ul#gform_fields_4 #field_4_3 {
 	display: inline-block;
 	width: 50%;
 }
 
-.website-sale-header .gform_body ul #field_4_2,
-.website-sale-header .gform_body ul .name_first {
+.website-sale-header .gform_body ul#gform_fields_4 #field_4_2,
+.website-sale-header .gform_body ul#gform_fields_4 .name_first {
 	padding: 0 14px 0 0;
 }
 
-.website-sale-header .gform_body ul .ginput_container_name {
+.website-sale-header .gform_body ul#gform_fields_4 .name_last {
+	padding-top: 0;
+	padding-right: 0;
+}
+
+.website-sale-header .gform_body ul#gform_fields_4 span {
+	margin-right: 0;
+}
+
+.website-sale-header .gform_body ul#gform_fields_4 .ginput_container_name {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 }
 
-.website-sale-header .gform_body ul .ginput_container_name .name_first,
-.website-sale-header .gform_body ul .ginput_container_name .name_last {
+.website-sale-header .gform_body ul#gform_fields_4 .ginput_container_name .name_first,
+.website-sale-header .gform_body ul#gform_fields_4 .ginput_container_name .name_last {
 	display: inline-block;
 	width: 50%;
 }
 
-.website-sale-header .gform_body ul select {
+.website-sale-header .gform_body ul#gform_fields_4 select {
 	width: 100%;
 	padding: 21px 23px;
 	color: #666;
@@ -4084,21 +4094,31 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
 	font-size: .95rem;
 }
 
-.website-sale-header .gform_body ul textarea {
+.website-sale-header .gform_body ul#gform_fields_4 textarea {
 	font-size: .95rem;
 }
 
-.website-sale-header .gform_body ul .gform_validation_container {
+.website-sale-header .gform_body ul#gform_fields_4 .gform_validation_container {
 	display: none;
 }
 
-.website-sale-header .gform_body ul input {
+.website-sale-header .gform_body ul#gform_fields_4 input {
 	padding: 21px 23px;
 	width: 100%;
 	font-size: .95rem;
+	margin: 0;
 }
 
-.website-sale-header .gform_footer input[type="submit"] {
+.website-sale-header .gform_body ul#gform_fields_4 div.ginput_complex.ginput_container.gf_name_has_2 {
+	width: auto;
+}
+
+.website-sale-header .gform_footer.top_label {
+	margin: 0;
+	padding: 0;
+}
+
+.website-sale-header #gform_submit_button_4 {
 	width: 100%;
 	padding: 21px 23px;
 	font-size: .95rem;
@@ -4109,9 +4129,15 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
 	transition: background .3s linear;
 }
 
-.website-sale-header .gform_footer input[type="submit"]:focus, .website-sale-header .gform_footer input[type="submit"]:hover {
+.website-sale-header #gform_submit_button_4:focus, .website-sale-header #gform_submit_button_4:hover {
 	outline: none;
 	background: #c33325;
+}
+
+.website-sale-header .gform_confirmation_message {
+	color: #fb554f;
+	font-weight: 700;
+	font-size: 1.25rem;
 }
 
 .website-sale-faq {
