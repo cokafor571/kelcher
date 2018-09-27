@@ -3957,6 +3957,219 @@ body .gform_wrapper.gform_validation_error .top_label input.medium, .gform_wrapp
 	width: 100%;
 }
 
+.website-sale-header {
+	padding-bottom: 2em;
+}
+
+.website-sale-header nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.website-sale-header nav .custom-logo-link {
+	padding: .5em 0 0 2em;
+}
+
+.website-sale-header nav .menu-landing-page-container {
+	width: 100%;
+}
+
+.website-sale-header nav .menu-landing-page-container .menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.website-sale-header nav .menu-landing-page-container .menu li {
+	padding: 0 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.website-sale-header nav .menu-landing-page-container .menu li {
+		padding: 0 2em;
+	}
+}
+
+.website-sale-header nav .menu-landing-page-container .menu li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+}
+
+.website-sale-header nav .menu-landing-page-container .menu li a:hover, .website-sale-header nav .menu-landing-page-container .menu li a:focus {
+	text-decoration: underline;
+}
+
+.website-sale-header .website-sale-intro {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0 1.5em;
+	color: #fff;
+}
+
+.website-sale-header .website-sale-intro h2 {
+	font-size: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+	.website-sale-header .website-sale-intro h2 {
+		font-size: 2.5rem;
+	}
+}
+
+.website-sale-header .website-sale-intro p {
+	font-size: .95rem;
+}
+
+@media screen and (min-width: 600px) {
+	.website-sale-header .website-sale-intro p {
+		font-size: 1.1rem;
+	}
+}
+
+.website-sale-header .gform_body ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.website-sale-header .gform_body ul li {
+	padding: 0 0 1.15rem;
+}
+
+.website-sale-header .gform_body ul li label {
+	display: none;
+}
+
+.website-sale-header .gform_body ul #field_4_2,
+.website-sale-header .gform_body ul #field_4_3 {
+	display: inline-block;
+	width: 50%;
+}
+
+.website-sale-header .gform_body ul #field_4_2,
+.website-sale-header .gform_body ul .name_first {
+	padding: 0 14px 0 0;
+}
+
+.website-sale-header .gform_body ul .ginput_container_name {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.website-sale-header .gform_body ul .ginput_container_name .name_first,
+.website-sale-header .gform_body ul .ginput_container_name .name_last {
+	display: inline-block;
+	width: 50%;
+}
+
+.website-sale-header .gform_body ul select {
+	width: 100%;
+	padding: 21px 23px;
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-size: .95rem;
+}
+
+.website-sale-header .gform_body ul textarea {
+	font-size: .95rem;
+}
+
+.website-sale-header .gform_body ul .gform_validation_container {
+	display: none;
+}
+
+.website-sale-header .gform_body ul input {
+	padding: 21px 23px;
+	width: 100%;
+	font-size: .95rem;
+}
+
+.website-sale-header .gform_footer input[type="submit"] {
+	width: 100%;
+	padding: 21px 23px;
+	font-size: .95rem;
+	color: #fff;
+	background: #fb554f;
+	font-weight: 700;
+	border-color: transparent;
+	transition: background .3s linear;
+}
+
+.website-sale-header .gform_footer input[type="submit"]:focus, .website-sale-header .gform_footer input[type="submit"]:hover {
+	outline: none;
+	background: #c33325;
+}
+
+.website-sale-faq {
+	margin: 2em 0;
+}
+
+@media screen and (min-width: 600px) {
+	.website-sale-faq {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		max-width: 1100px;
+		margin: 4em auto 3em;
+		padding: 0 1em;
+	}
+}
+
+.website-sale-faq .website-sale-column1,
+.website-sale-faq .website-sale-column2 {
+	padding: 0 2em;
+}
+
+.website-sale-faq .website-sale-column1 .faq-column,
+.website-sale-faq .website-sale-column2 .faq-column {
+	margin: 1em 0;
+}
+
+@media screen and (min-width: 600px) {
+	.website-sale-faq .website-sale-column1 .faq-column,
+	.website-sale-faq .website-sale-column2 .faq-column {
+		margin: 2em 0;
+	}
+}
+
+.website-sale-faq .website-sale-column1 .faq-column h3,
+.website-sale-faq .website-sale-column2 .faq-column h3 {
+	font-size: .9rem;
+}
+
+@media screen and (min-width: 600px) {
+	.website-sale-faq .website-sale-column1 .faq-column h3,
+	.website-sale-faq .website-sale-column2 .faq-column h3 {
+		font-size: 1rem;
+	}
+}
+
+.website-sale-faq .website-sale-column1 .faq-column p,
+.website-sale-faq .website-sale-column2 .faq-column p {
+	font-size: .85rem;
+}
+
+@media screen and (min-width: 600px) {
+	.website-sale-faq .website-sale-column1 .faq-column p,
+	.website-sale-faq .website-sale-column2 .faq-column p {
+		font-size: .9rem;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Top Level Page
 --------------------------------------------------------------*/

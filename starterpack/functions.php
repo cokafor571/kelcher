@@ -48,6 +48,7 @@ function starterpack_setup() {
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Header', 'starterpack' ),
 		'menu-2' => esc_html__( 'Page Header', 'starterpack' ),
+		'menu-3' => esc_html__( 'Landing Page Header', 'starterpack' ),
 		'social' => esc_html__( 'Social Media Menu', 'starterpack' ),
 	) );
 
@@ -310,6 +311,11 @@ function starterpack_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'starterpack_widgets_init' );
+
+/*
+* Gravity Forms Field Label Visibility
+*/
+add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
 /**
  * Enqueue scripts and styles.
